@@ -1,0 +1,127 @@
+{% load static otp_webauthn %}<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Sign in - DCM</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#2563EB">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          sans: ['-apple-system', 'BlinkMacSystemFont', '"SF Pro Text"', '"SF Pro Display"', '"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'],
+        },
+      }
+    }
+  }
+  </script>
+  <style>
+    [x-cloak] { display: none !important; }
+  </style>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3/dist/cdn.min.js"></script>
+</head>
+<body class="h-full bg-slate-50 flex items-center justify-center px-4"
+      style="font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display', 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+
+  <div class="w-full max-w-sm">
+    <div class="text-center mb-8">
+      <h1 class="text-2xl font-semibold text-slate-800 tracking-tight">Defense Case Manager</h1>
+      <p class="mt-2 text-sm text-slate-400">Sign in to continue</p>
+    </div>
+
+    <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6">
+      {% if form.errors %}
+      <div class="mb-4 rounded-lg bg-red-50 border border-red-200 px-4 py-3 text-sm text-red-800">
+        Invalid username or password.
+      </div>
+      {% endif %}
+
+      <!-- WebAuthn Face ID / Passkey -->
+      <div id="passkey-verification-placeholder" class="mb-4">
+        <!-- Replaced by JS if WebAuthn is available -->
+      </div>
+
+      <template id="passkey-verification-available-template">
+        <div class="mb-4">
+          <button type="button"
+                  id="passkey-verification-button"
+                  class="w-full rounded-lg bg-slate-800 px-4 py-3 text-sm font-medium text-white hover:bg-slate-700 active:bg-slate-900 transition-colors flex items-center justify-center gap-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 11c0 1.657-1.343 3-3 3s-3-1.343-3-3 1.343-3 3-3 3 1.343 3 3zm0 0c0 1.657 1.343 3 3 3s3-1.343 3-3-1.343-3-3-3-3 1.343-3 3zm-3 8v-1a4 4 0 014-4h0a4 4 0 014 4v1"/>
+            </svg>
+            Sign in with Face ID
+          </button>
+          <p id="passkey-verification-status-message"
+             class="mt-2 text-center text-sm text-slate-500 hidden"
+             aria-live="assertive"></p>
+        </div>
+
+        <div class="relative my-5">
+          <div class="absolute inset-0 flex items-center">
+            <div class="w-full border-t border-slate-200"></div>
+          </div>
+          <div class="relative flex justify-center text-xs">
+            <span class="bg-white px-3 text-slate-400">or use password</span>
+          </div>
+        </div>
+      </template>
+
+      <template id="passkey-verification-unavailable-template">
+        <!-- No passkey support — just show the password form -->
+      </template>
+
+      <form method="post" action="{% url 'accounts:login' %}" class="space-y-4">
+        {% csrf_token %}
+        <input type="hidden" name="next" value="{{ next }}">
+
+        <div>
+          <label for="id_username" class="block text-sm font-medium text-slate-600 mb-1.5">Username</label>
+          <input type="text"
+                 id="id_username"
+                 name="username"
+                 autocomplete="username webauthn"
+                 autofocus
+                 required
+                 class="block w-full rounded-lg border border-slate-200 bg-white px-3 py-2.5 text-base text-slate-800 placeholder-slate-400 focus:border-slate-400 focus:ring-1 focus:ring-slate-400 focus:outline-none transition-colors">
+        </div>
+
+        <div>
+          <label for="id_password" class="block text-sm font-medium text-slate-600 mb-1.5">Password</label>
+          <input type="password"
+                 id="id_password"
+                 name="password"
+                 autocomplete="current-password"
+                 required
+                 class="block w-full rounded-lg border border-slate-200 bg-white px-3 py-2.5 text-base text-slate-800 placeholder-slate-400 focus:border-slate-400 focus:ring-1 focus:ring-slate-400 focus:outline-none transition-colors">
+        </div>
+
+        <button type="submit"
+                class="w-full rounded-lg bg-slate-800 px-4 py-2.5 text-sm font-medium text-white hover:bg-slate-700 active:bg-slate-900 transition-colors">
+          Sign in
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- WebAuthn authentication scripts (handles Face ID ceremony) -->
+  {% render_otp_webauthn_auth_scripts username_field_selector="#id_username" %}
+
+  <!-- Show/hide status message when it has content -->
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var statusEl = document.getElementById('passkey-verification-status-message');
+    if (statusEl) {
+      new MutationObserver(function() {
+        statusEl.classList.toggle('hidden', !statusEl.textContent.trim());
+      }).observe(statusEl, { childList: true, characterData: true, subtree: true });
+    }
+  });
+  </script>
+
+</body>
+</html>

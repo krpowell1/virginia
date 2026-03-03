@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block title %}Cases - DCM{% endblock %}
+
+{% block content %}
+<div class="max-w-3xl mx-auto px-4 py-6" x-data="{ phase: '{{ active_phase }}' }">
+
+  <h1 class="text-2xl font-semibold text-slate-800 tracking-tight mb-6">Cases</h1>
+
+  <!-- Search -->
+  <form action="{% url 'cases:list' %}" method="get" @submit.prevent class="mb-4">
+    <input type="hidden" name="phase" :value="phase" value="{{ active_phase }}">
+    <input type="hidden" name="sort" value="{{ sort }}">
+    <div class="relative">
+      <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+      </svg>
+      <input type="search"
+             name="q"
+             id="case-search"
+             value="{{ query }}"
+             placeholder="Search cases..."
+             autocomplete="off"
+             class="block w-full rounded-xl border border-slate-200 bg-white pl-10 pr-4 py-3 text-base text-slate-800 placeholder-slate-400 focus:border-slate-400 focus:ring-1 focus:ring-slate-400 focus:outline-none transition-colors"
+             hx-get="{% url 'cases:list-partial' %}"
+             hx-trigger="keyup changed delay:300ms, search"
+             hx-target="#case-list"
+             hx-include="[name=phase],[name=sort]">
+    </div>
+    <noscript><button type="submit" class="mt-2 rounded-lg bg-slate-800 px-4 py-2 text-sm text-white">Search</button></noscript>
+  </form>
+
+  <!-- Phase tabs -->
+  <div class="flex gap-1 overflow-x-auto pb-4 -mx-4 px-4 scrollbar-hide">
+    {% for value, label in phase_choices %}
+    <a href="{% url 'cases:list' %}?phase={{ value }}&q={{ query }}&sort={{ sort }}"
+       @click.prevent="phase = '{{ value }}'; $nextTick(() => $dispatch('filter-change'))"
+       :class="phase === '{{ value }}' ? 'bg-slate-800 text-white' : 'text-slate-500 hover:bg-slate-100 hover:text-slate-700'"
+       class="shrink-0 rounded-lg px-3 py-1.5 text-sm font-medium transition-colors whitespace-nowrap">
+      {{ label }}
+    </a>
+    {% endfor %}
+  </div>
+
+  <!-- Results -->
+  <div id="case-list">
+    {% include "cases/partials/case_list_results.html" %}
+  </div>
+
+</div>
+
+<script>
+// When a phase tab is clicked, trigger the search input to re-fetch
+document.addEventListener('filter-change', function() {
+  var el = document.getElementById('case-search');
+  if (el && window.htmx) {
+    // Update the hx-include values and trigger
+    htmx.trigger(el, 'search');
+  }
+});
+</script>
+{% endblock %}

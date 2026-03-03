@@ -1,0 +1,55 @@
+<form method="post"
+      action="{% url 'cases:deadline-add' %}"
+      hx-post="{% url 'cases:deadline-add' %}"
+      hx-target="#deadline-modal-body"
+      hx-swap="innerHTML"
+      class="p-6 space-y-4">
+  {% csrf_token %}
+
+  <div>
+    <label class="block text-sm font-medium text-slate-600 mb-1.5">Case</label>
+    {{ deadline_form.case }}
+    {% if deadline_form.case.errors %}
+    <p class="text-xs text-red-600 mt-1">{{ deadline_form.case.errors.0 }}</p>
+    {% endif %}
+  </div>
+
+  <div>
+    <label class="block text-sm font-medium text-slate-600 mb-1.5">Title</label>
+    {{ deadline_form.title }}
+    {% if deadline_form.title.errors %}
+    <p class="text-xs text-red-600 mt-1">{{ deadline_form.title.errors.0 }}</p>
+    {% endif %}
+  </div>
+
+  <div class="grid grid-cols-2 gap-4">
+    <div>
+      <label class="block text-sm font-medium text-slate-600 mb-1.5">Due Date</label>
+      {{ deadline_form.due_date }}
+      {% if deadline_form.due_date.errors %}
+      <p class="text-xs text-red-600 mt-1">{{ deadline_form.due_date.errors.0 }}</p>
+      {% endif %}
+    </div>
+    <div>
+      <label class="block text-sm font-medium text-slate-600 mb-1.5">Type</label>
+      {{ deadline_form.deadline_type }}
+    </div>
+  </div>
+
+  <div>
+    <label class="block text-sm font-medium text-slate-600 mb-1.5">Assigned To</label>
+    {{ deadline_form.assigned_to }}
+  </div>
+
+  <div class="flex items-center gap-2">
+    {{ deadline_form.is_extendable }}
+    <label class="text-sm text-slate-600">Extendable</label>
+  </div>
+
+  <div class="flex justify-end gap-3 pt-2">
+    <button type="submit"
+            class="rounded-lg bg-slate-800 px-5 py-2.5 text-sm font-medium text-white hover:bg-slate-700 transition-colors">
+      Create Deadline
+    </button>
+  </div>
+</form>

@@ -1,0 +1,6 @@
+dbs:
+  - path: /app/db/db.sqlite3
+    replicas:
+      - url: s3://${LITESTREAM_S3_BUCKET}/db.sqlite3
+        retention: 720h
+        sync-interval: 1s

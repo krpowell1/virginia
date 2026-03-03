@@ -1,0 +1,81 @@
+<form method="post"
+      action="{% url 'cases:case-add' %}"
+      hx-post="{% url 'cases:case-add' %}"
+      hx-target="#case-modal-body"
+      hx-swap="innerHTML"
+      class="p-6 space-y-4">
+  {% csrf_token %}
+
+  <div>
+    <label class="block text-sm font-medium text-slate-600 mb-1.5">Case Number</label>
+    {{ case_form.case_number }}
+    {% if case_form.case_number.errors %}
+    <p class="text-xs text-red-600 mt-1">{{ case_form.case_number.errors.0 }}</p>
+    {% endif %}
+  </div>
+
+  <div>
+    <label class="block text-sm font-medium text-slate-600 mb-1.5">Caption</label>
+    {{ case_form.caption }}
+    {% if case_form.caption.errors %}
+    <p class="text-xs text-red-600 mt-1">{{ case_form.caption.errors.0 }}</p>
+    {% endif %}
+  </div>
+
+  <div>
+    <label class="block text-sm font-medium text-slate-600 mb-1.5">Short Name</label>
+    {{ case_form.short_name }}
+  </div>
+
+  <div class="grid grid-cols-2 gap-4">
+    <div>
+      <label class="block text-sm font-medium text-slate-600 mb-1.5">Court</label>
+      {{ case_form.court }}
+      {% if case_form.court.errors %}
+      <p class="text-xs text-red-600 mt-1">{{ case_form.court.errors.0 }}</p>
+      {% endif %}
+    </div>
+    <div>
+      <label class="block text-sm font-medium text-slate-600 mb-1.5">County</label>
+      {{ case_form.county }}
+      {% if case_form.county.errors %}
+      <p class="text-xs text-red-600 mt-1">{{ case_form.county.errors.0 }}</p>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="grid grid-cols-2 gap-4">
+    <div>
+      <label class="block text-sm font-medium text-slate-600 mb-1.5">Case Type</label>
+      {{ case_form.case_type }}
+    </div>
+    <div>
+      <label class="block text-sm font-medium text-slate-600 mb-1.5">Jurisdiction</label>
+      {{ case_form.jurisdiction }}
+    </div>
+  </div>
+
+  <div class="grid grid-cols-2 gap-4">
+    <div>
+      <label class="block text-sm font-medium text-slate-600 mb-1.5">Plaintiff</label>
+      {{ case_form.plaintiff_name }}
+      {% if case_form.plaintiff_name.errors %}
+      <p class="text-xs text-red-600 mt-1">{{ case_form.plaintiff_name.errors.0 }}</p>
+      {% endif %}
+    </div>
+    <div>
+      <label class="block text-sm font-medium text-slate-600 mb-1.5">Defendant (our client)</label>
+      {{ case_form.defendant_name }}
+      {% if case_form.defendant_name.errors %}
+      <p class="text-xs text-red-600 mt-1">{{ case_form.defendant_name.errors.0 }}</p>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="flex justify-end gap-3 pt-2">
+    <button type="submit"
+            class="rounded-lg bg-slate-800 px-5 py-2.5 text-sm font-medium text-white hover:bg-slate-700 transition-colors">
+      Create Case
+    </button>
+  </div>
+</form>

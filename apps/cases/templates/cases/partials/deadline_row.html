@@ -1,0 +1,105 @@
+{% load cases_tags %}
+<div class="deadline-item px-5 py-3.5 {% if deadline.completed %}opacity-50{% endif %}">
+  <div class="flex items-center justify-between gap-3">
+    <a href="{% url 'cases:detail' deadline.case.pk %}?tab=deadlines"
+       class="min-w-0 flex-1 group">
+      <div class="flex items-center gap-2">
+        {% if show_case %}
+        <span class="text-sm font-medium text-slate-800 group-hover:text-slate-600 transition-colors truncate">
+          {{ deadline.case.short_name|default:deadline.case.caption }}
+        </span>
+        <span class="text-slate-300">&middot;</span>
+        {% endif %}
+        <span class="text-sm {% if show_case %}text-slate-500{% else %}text-slate-800 font-medium{% endif %} truncate">
+          {{ deadline.title }}
+        </span>
+      </div>
+      {% if deadline.rule_reference %}
+      <p class="text-xs text-slate-400 mt-0.5">{{ deadline.rule_reference }}</p>
+      {% endif %}
+    </a>
+
+    <div class="flex items-center gap-2 shrink-0">
+      {% if not deadline.is_extendable %}
+      <span class="inline-flex items-center rounded-full bg-red-50 border border-red-200 px-2 py-0.5 text-xs font-medium text-red-600">
+        Non-ext.
+      </span>
+      {% endif %}
+
+      {% if deadline.completed %}
+      <span class="inline-flex items-center rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-medium text-slate-500">
+        Done
+      </span>
+      {% else %}
+      {% with days=deadline.days_remaining %}
+      <span class="inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-bold
+                   {% if days < 0 %}bg-red-50 text-red-700 border border-red-200
+                   {% elif days == 0 %}bg-amber-50 text-amber-700 border border-amber-200
+                   {% elif days <= 3 %}bg-amber-50 text-amber-600 border border-amber-200
+                   {% elif days <= 7 %}bg-yellow-50 text-yellow-700 border border-yellow-200
+                   {% else %}bg-slate-100 text-slate-600{% endif %}">
+        {% if days < 0 %}{{ days|abs_val }}d overdue{% elif days == 0 %}Today{% else %}{{ days }}d{% endif %}
+      </span>
+      {% endwith %}
+      {% endif %}
+    </div>
+  </div>
+
+  {% if not deadline.completed %}
+  <div class="flex items-center gap-2 mt-2" x-data="{ extending: false }">
+    <!-- Mark complete -->
+    <form method="post"
+          action="{% url 'cases:deadline-complete' deadline.case.pk deadline.pk %}"
+          hx-post="{% url 'cases:deadline-complete' deadline.case.pk deadline.pk %}"
+          hx-target="closest .deadline-item"
+          hx-swap="outerHTML">
+      {% csrf_token %}
+      <button type="submit"
+              class="inline-flex items-center rounded-lg border border-slate-200 bg-white px-2.5 py-1 text-xs font-medium text-slate-600 hover:bg-slate-50 hover:border-slate-300 transition-colors">
+        <svg class="w-3.5 h-3.5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+        </svg>
+        Complete
+      </button>
+    </form>
+
+    {% if deadline.is_extendable %}
+    <!-- Extend toggle -->
+    <button type="button"
+            @click="extending = !extending"
+            x-show="!extending"
+            class="inline-flex items-center rounded-lg border border-slate-200 bg-white px-2.5 py-1 text-xs font-medium text-slate-600 hover:bg-slate-50 hover:border-slate-300 transition-colors">
+      <svg class="w-3.5 h-3.5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
+      </svg>
+      Extend
+    </button>
+
+    <!-- Extend form -->
+    <form x-show="extending"
+          x-cloak
+          x-transition
+          method="post"
+          action="{% url 'cases:deadline-extend' deadline.case.pk deadline.pk %}"
+          hx-post="{% url 'cases:deadline-extend' deadline.case.pk deadline.pk %}"
+          hx-target="closest .deadline-item"
+          hx-swap="outerHTML"
+          class="flex items-center gap-2 flex-1">
+      {% csrf_token %}
+      <input type="date" name="new_due_date" required
+             class="rounded-lg border border-slate-200 px-2 py-1 text-xs text-slate-800 focus:border-slate-400 focus:ring-1 focus:ring-slate-400 focus:outline-none">
+      <input type="text" name="reason" required placeholder="Reason"
+             class="flex-1 rounded-lg border border-slate-200 px-2 py-1 text-xs text-slate-800 placeholder-slate-400 focus:border-slate-400 focus:ring-1 focus:ring-slate-400 focus:outline-none">
+      <button type="submit"
+              class="rounded-lg bg-slate-800 px-2.5 py-1 text-xs font-medium text-white hover:bg-slate-700 transition-colors">
+        Save
+      </button>
+      <button type="button" @click="extending = false"
+              class="rounded-lg border border-slate-200 px-2.5 py-1 text-xs text-slate-500 hover:bg-slate-50 transition-colors">
+        Cancel
+      </button>
+    </form>
+    {% endif %}
+  </div>
+  {% endif %}
+</div>

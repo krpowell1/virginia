@@ -1,0 +1,12 @@
+Django==5.1.5
+gunicorn==23.0.0
+django-htmx==1.27.0
+django-ical==1.9.2
+django-otp==1.5.4
+django-otp-webauthn==0.4.0
+workalendar==17.0.0
+python-dateutil==2.9.0
+whitenoise==6.8.2
+python-decouple==3.8
+pytest==8.3.4
+pytest-django==4.9.0

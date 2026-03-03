@@ -1,0 +1,10 @@
+<span class="inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium
+{% if phase == 'PLEADING' %}bg-violet-50 text-violet-700
+{% elif phase == 'DISCOVERY' %}bg-blue-50 text-blue-700
+{% elif phase == 'DISPOSITIVE_MOTIONS' %}bg-indigo-50 text-indigo-700
+{% elif phase == 'TRIAL_PREP' %}bg-amber-50 text-amber-700
+{% elif phase == 'TRIAL' %}bg-orange-50 text-orange-700
+{% elif phase == 'POST_TRIAL' %}bg-rose-50 text-rose-700
+{% elif phase == 'APPEAL' %}bg-red-50 text-red-700
+{% else %}bg-slate-100 text-slate-600
+{% endif %}">{{ phase_display }}</span>

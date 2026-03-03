@@ -1,0 +1,32 @@
+<div class="space-y-4">
+
+  {% regroup deadlines by completed as deadline_groups %}
+
+  {% for group in deadline_groups %}
+  {% if not group.grouper %}
+  <!-- Pending deadlines -->
+  <div class="bg-white rounded-xl border border-slate-200 shadow-sm divide-y divide-slate-100">
+    {% for deadline in group.list %}
+    {% include "cases/partials/deadline_row.html" with show_case=False %}
+    {% endfor %}
+  </div>
+  {% else %}
+  <!-- Completed deadlines -->
+  <div class="mt-6">
+    <h3 class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3">Completed</h3>
+    <div class="bg-white rounded-xl border border-slate-200 shadow-sm divide-y divide-slate-100">
+      {% for deadline in group.list %}
+      {% include "cases/partials/deadline_row.html" with show_case=False %}
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+  {% endfor %}
+
+  {% if not deadlines %}
+  <div class="bg-white rounded-xl border border-slate-200 shadow-sm px-5 py-12 text-center">
+    <p class="text-sm text-slate-400">No deadlines</p>
+  </div>
+  {% endif %}
+
+</div>

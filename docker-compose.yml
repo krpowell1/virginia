@@ -1,0 +1,45 @@
+services:
+  litestream:
+    image: litestream/litestream:0.5
+    volumes:
+      - db_data:/app/db
+      - ./litestream.yml:/etc/litestream.yml:ro
+    env_file: .env
+    command: >
+      sh -c "litestream restore -if-replica-exists -config /etc/litestream.yml /app/db/db.sqlite3
+      && exec litestream replicate -config /etc/litestream.yml"
+    restart: unless-stopped
+
+  web:
+    build: .
+    depends_on:
+      - litestream
+    volumes:
+      - db_data:/app/db
+      - static_files:/app/staticfiles
+    env_file: .env
+    environment:
+      - DATABASE_PATH=/app/db/db.sqlite3
+    expose:
+      - "8000"
+    restart: unless-stopped
+
+  caddy:
+    image: caddy:2-alpine
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - static_files:/srv/static:ro
+      - caddy_data:/data
+    environment:
+      - DOMAIN=${DOMAIN:-localhost}
+    depends_on:
+      - web
+    restart: unless-stopped
+
+volumes:
+  db_data:
+  static_files:
+  caddy_data:

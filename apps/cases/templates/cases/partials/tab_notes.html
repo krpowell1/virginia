@@ -1,0 +1,70 @@
+<div class="space-y-4">
+
+  <!-- Add note form -->
+  <div class="bg-white rounded-xl border border-slate-200 shadow-sm px-5 py-4">
+    <form method="post"
+          action="{% url 'cases:note-add' case.pk %}"
+          hx-post="{% url 'cases:note-add' case.pk %}"
+          hx-target="#tab-content"
+          hx-swap="innerHTML"
+          class="space-y-3">
+      {% csrf_token %}
+      {{ note_form.content }}
+      {% if note_form.content.errors %}
+      <p class="text-xs text-red-600">{{ note_form.content.errors.0 }}</p>
+      {% endif %}
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div>
+            <label class="sr-only">Type</label>
+            {{ note_form.note_type }}
+          </div>
+          <label class="flex items-center gap-1.5 text-xs text-slate-500 cursor-pointer">
+            {{ note_form.is_privileged }}
+            Privileged
+          </label>
+        </div>
+        <button type="submit"
+                class="rounded-lg bg-slate-800 px-4 py-2 text-sm font-medium text-white hover:bg-slate-700 transition-colors">
+          Add Note
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Notes list -->
+  {% if notes %}
+  <div class="space-y-3">
+    {% for note in notes %}
+    <div class="bg-white rounded-xl border border-slate-200 shadow-sm px-5 py-4">
+      <div class="flex items-center gap-2 mb-2">
+        <span class="inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium
+                     {% if note.note_type == 'STRATEGY' %}bg-violet-50 text-violet-700
+                     {% elif note.note_type == 'RESEARCH' %}bg-blue-50 text-blue-700
+                     {% elif note.note_type == 'CLIENT_COMMUNICATION' %}bg-amber-50 text-amber-700
+                     {% elif note.note_type == 'COURT_FILING' %}bg-rose-50 text-rose-700
+                     {% elif note.note_type == 'INTERNAL' %}bg-slate-100 text-slate-600
+                     {% else %}bg-slate-100 text-slate-600{% endif %}">
+          {{ note.get_note_type_display }}
+        </span>
+        {% if note.is_privileged %}
+        <span class="inline-flex items-center rounded-full bg-red-50 border border-red-200 px-2 py-0.5 text-xs font-bold text-red-700">
+          PRIVILEGED
+        </span>
+        {% endif %}
+        <span class="text-xs text-slate-400">
+          {{ note.created_at|date:"M j, Y g:i A" }}
+          {% if note.author %}&middot; {{ note.author.get_full_name|default:note.author.username }}{% endif %}
+        </span>
+      </div>
+      <p class="text-sm text-slate-700 whitespace-pre-wrap">{{ note.content }}</p>
+    </div>
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="bg-white rounded-xl border border-slate-200 shadow-sm px-5 py-12 text-center">
+    <p class="text-sm text-slate-400">No notes yet</p>
+  </div>
+  {% endif %}
+
+</div>

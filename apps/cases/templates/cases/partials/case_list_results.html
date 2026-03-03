@@ -1,0 +1,11 @@
+{% if cases %}
+<div class="space-y-2">
+  {% for case in cases %}
+  {% include "cases/partials/case_row.html" %}
+  {% endfor %}
+</div>
+{% else %}
+<div class="bg-white rounded-xl border border-slate-200 shadow-sm px-5 py-12 text-center">
+  <p class="text-sm text-slate-400">No cases found</p>
+</div>
+{% endif %}
