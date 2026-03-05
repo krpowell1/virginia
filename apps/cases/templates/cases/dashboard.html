@@ -8,22 +8,28 @@
 
   <!-- Greeting -->
   {% now "H" as hour %}
-  <h1 class="font-serif text-2xl text-walnut-800">Good {% if hour|add:"0" < 12 %}morning{% elif hour|add:"0" < 17 %}afternoon{% else %}evening{% endif %}{% if user.first_name %}, {{ user.first_name }}{% endif %}</h1>
+  <h1 class="font-serif text-2xl text-walnut-800">Good {% if hour|add:"0" < 12 %}morning{% elif hour|add:"0" < 17 %}afternoon{% else %}evening{% endif %}, {% firstof user.first_name user.username %}</h1>
 
   <!-- ============================================================= -->
   <!-- What's New banner                                              -->
   <!-- ============================================================= -->
   {% if has_updates and latest_entry %}
   <div id="whats-new-banner"
-       class="bg-walnut-800 rounded-card px-5 py-3 flex items-center justify-between gap-3">
-    <a href="{% url 'cases:changelog' %}" class="flex items-center gap-3 min-w-0 group">
-      <span class="text-terra-300 text-sm shrink-0">New</span>
-      <span class="text-sm text-cream-100 group-hover:text-white truncate">{{ latest_entry.title }}</span>
+       class="bg-white rounded-card border border-cream-200 shadow-warm border-l-4 border-l-terra-400 px-5 py-4 flex items-start justify-between gap-4">
+    <a href="{% url 'cases:changelog' %}" class="min-w-0 group">
+      <p class="text-[11px] font-semibold uppercase tracking-[0.08em] text-terra-400 mb-1">What's New</p>
+      <p class="text-sm font-medium text-walnut-800 group-hover:text-terra-500 transition-colors duration-200">
+        {{ latest_entry.title }}
+        <svg class="inline w-3.5 h-3.5 ml-0.5 -mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+        </svg>
+      </p>
+      <p class="text-xs text-walnut-400 mt-1">Tap to see what's new in this update</p>
     </a>
     <button hx-post="{% url 'cases:changelog-dismiss' %}"
             hx-target="#whats-new-banner"
             hx-swap="outerHTML"
-            class="shrink-0 p-1 text-walnut-400 hover:text-cream-100 transition-colors duration-200"
+            class="shrink-0 p-1.5 text-walnut-300 hover:text-walnut-500 transition-colors duration-200 rounded-full hover:bg-cream-100"
             aria-label="Dismiss">
       <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
@@ -191,10 +197,10 @@
   <!-- ============================================================= -->
   <section>
     <div class="flex items-center gap-2.5 mb-3 border-b border-cream-200 pb-2">
-      <h2 class="text-[11px] font-semibold uppercase tracking-[0.08em] text-sky-300">Needs Attention</h2>
+      <h2 class="text-[11px] font-semibold uppercase tracking-[0.08em] text-terra-400">Needs Attention</h2>
       {% with total=missing_defenses|length|add:pending_approval|length %}
       {% if total %}
-      <span class="inline-flex items-center justify-center min-w-[20px] h-5 rounded-full bg-sky-300 text-white text-xs font-bold px-1.5">
+      <span class="inline-flex items-center justify-center min-w-[20px] h-5 rounded-full bg-terra-400 text-white text-xs font-bold px-1.5">
         {{ total }}
       </span>
       {% endif %}
