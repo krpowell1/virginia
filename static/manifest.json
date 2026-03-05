@@ -3,7 +3,7 @@
   "short_name": "Cases",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#FFF5F2",
+  "background_color": "#FFFBF8",
   "theme_color": "#FECDD3",
   "orientation": "portrait-primary",
   "icons": [

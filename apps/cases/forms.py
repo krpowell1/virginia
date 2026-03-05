@@ -9,21 +9,21 @@ from .models import Case, CaseContact, Deadline, FeedbackRequest, Note
 # ---------------------------------------------------------------------------
 
 _INPUT = (
-    "block w-full rounded-xl border border-peach-100 bg-white px-3 py-2.5 "
-    "text-peach-900 text-base placeholder-[#9B8A82] "
-    "focus:border-peach-300 focus:ring-1 focus:ring-peach-300 focus:outline-none "
-    "transition-colors"
+    "block w-full rounded-card border border-cream-200 bg-white px-3 py-2.5 "
+    "text-walnut-800 text-base placeholder-walnut-300 "
+    "focus:border-terra-400 focus:ring-1 focus:ring-terra-400 focus:outline-none "
+    "transition-colors duration-200"
 )
 
 _SELECT = _INPUT
 
-_CHECKBOX = "h-4 w-4 rounded border-peach-100 text-peach-600 focus:ring-peach-300"
+_CHECKBOX = "h-4 w-4 rounded border-cream-200 text-terra-400 focus:ring-terra-400"
 
 _TEXTAREA = (
-    "block w-full rounded-xl border border-peach-100 bg-white px-3 py-2.5 "
-    "text-peach-900 text-base placeholder-[#9B8A82] "
-    "focus:border-peach-300 focus:ring-1 focus:ring-peach-300 focus:outline-none "
-    "transition-colors resize-y"
+    "block w-full rounded-card border border-cream-200 bg-white px-3 py-2.5 "
+    "text-walnut-800 text-base placeholder-walnut-300 "
+    "focus:border-terra-400 focus:ring-1 focus:ring-terra-400 focus:outline-none "
+    "transition-colors duration-200 resize-y"
 )
 
 
@@ -137,7 +137,7 @@ class AddContactForm(forms.ModelForm):
 
 
 # ---------------------------------------------------------------------------
-# Deadline action forms
+# Feedback form
 # ---------------------------------------------------------------------------
 
 
@@ -157,6 +157,11 @@ class FeedbackRequestForm(forms.ModelForm):
             )),
             "priority": forms.Select(attrs=_attrs(_SELECT)),
         }
+
+
+# ---------------------------------------------------------------------------
+# Deadline action forms
+# ---------------------------------------------------------------------------
 
 
 class CompleteDeadlineForm(forms.Form):

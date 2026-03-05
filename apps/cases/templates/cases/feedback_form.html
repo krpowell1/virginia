@@ -1,13 +1,13 @@
 {% extends "base.html" %}
 
-{% block title %}New Request - DCM{% endblock %}
+{% block title %}New Request - Defense Case Manager{% endblock %}
 
 {% block content %}
 <div class="max-w-lg mx-auto px-4 py-6">
 
   <div class="mb-6">
-    <h1 class="text-2xl font-semibold text-peach-900 tracking-tight">What do you need?</h1>
-    <p class="text-sm text-[#9B8A82] mt-1">Describe it however makes sense. Kasey will figure it out.</p>
+    <h1 class="font-serif text-2xl text-walnut-800 tracking-tight">What do you need?</h1>
+    <p class="text-sm text-walnut-400 mt-1">Describe it however makes sense. Kasey will figure it out.</p>
   </div>
 
   <form method="post"
@@ -18,59 +18,59 @@
 
     <!-- Type -->
     <div>
-      <label for="{{ form.request_type.id_for_label }}" class="block text-sm font-medium text-peach-900/70 mb-1">
+      <label for="{{ form.request_type.id_for_label }}" class="block text-[11px] font-medium uppercase tracking-[0.08em] text-walnut-400 mb-1.5">
         What kind of request?
       </label>
       {{ form.request_type }}
       {% if form.request_type.errors %}
-      <p class="text-sm text-red-600 mt-1">{{ form.request_type.errors.0 }}</p>
+      <p class="text-xs text-coral-500 mt-1">{{ form.request_type.errors.0 }}</p>
       {% endif %}
     </div>
 
     <!-- Title -->
     <div>
-      <label for="{{ form.title.id_for_label }}" class="block text-sm font-medium text-peach-900/70 mb-1">
+      <label for="{{ form.title.id_for_label }}" class="block text-[11px] font-medium uppercase tracking-[0.08em] text-walnut-400 mb-1.5">
         Quick summary
       </label>
       {{ form.title }}
       {% if form.title.errors %}
-      <p class="text-sm text-red-600 mt-1">{{ form.title.errors.0 }}</p>
+      <p class="text-xs text-coral-500 mt-1">{{ form.title.errors.0 }}</p>
       {% endif %}
     </div>
 
     <!-- Description -->
     <div>
-      <label for="{{ form.description.id_for_label }}" class="block text-sm font-medium text-peach-900/70 mb-1">
+      <label for="{{ form.description.id_for_label }}" class="block text-[11px] font-medium uppercase tracking-[0.08em] text-walnut-400 mb-1.5">
         Details
       </label>
       {{ form.description }}
       {% if form.description.errors %}
-      <p class="text-sm text-red-600 mt-1">{{ form.description.errors.0 }}</p>
+      <p class="text-xs text-coral-500 mt-1">{{ form.description.errors.0 }}</p>
       {% endif %}
     </div>
 
     <!-- Priority -->
     <div>
-      <label for="{{ form.priority.id_for_label }}" class="block text-sm font-medium text-peach-900/70 mb-1">
+      <label for="{{ form.priority.id_for_label }}" class="block text-[11px] font-medium uppercase tracking-[0.08em] text-walnut-400 mb-1.5">
         Priority
       </label>
       {{ form.priority }}
       {% if form.priority.errors %}
-      <p class="text-sm text-red-600 mt-1">{{ form.priority.errors.0 }}</p>
+      <p class="text-xs text-coral-500 mt-1">{{ form.priority.errors.0 }}</p>
       {% endif %}
     </div>
 
     <!-- Actions -->
     <div class="flex items-center gap-3 pt-2">
       <button type="submit"
-              class="inline-flex items-center gap-1.5 rounded-xl bg-peach-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-peach-700 transition-colors">
+              class="inline-flex items-center gap-1.5 rounded-card bg-terra-400 px-5 py-2.5 text-sm font-semibold text-white hover:bg-terra-500 transition-colors">
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
         </svg>
         Send Request
       </button>
       <a href="{% url 'cases:feedback-list' %}"
-         class="text-sm font-medium text-peach-900/60 hover:text-peach-900 transition-colors">
+         class="text-sm font-medium text-walnut-400 hover:text-walnut-600 transition-colors">
         Cancel
       </a>
     </div>

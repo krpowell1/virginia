@@ -1,20 +1,20 @@
 {% load cases_tags %}
 <a href="{% url 'cases:detail' case.pk %}"
-   class="block bg-peach-50 rounded-xl border border-peach-100 shadow-warm hover:shadow-warm-md hover:border-peach-300 transition-all px-5 py-4">
+   class="block bg-white rounded-card border border-cream-200 shadow-warm hover:shadow-warm-md hover:border-walnut-200 transition-all duration-200 px-5 py-4 group">
   <div class="flex items-start justify-between gap-3">
     <div class="min-w-0 flex-1">
-      <div class="flex items-center gap-2">
-        <h3 class="text-sm font-semibold text-peach-900 truncate">
+      <div class="flex items-center gap-2.5">
+        <h3 class="text-sm font-serif font-normal text-walnut-800 truncate group-hover:text-terra-500 transition-colors duration-200">
           {{ case.short_name|default:case.caption }}
         </h3>
         {% include "cases/partials/phase_badge.html" with phase=case.phase phase_display=case.get_phase_display %}
       </div>
-      <p class="text-xs text-[#9B8A82] mt-0.5">{{ case.case_number }}</p>
+      <p class="text-xs text-walnut-400 mt-0.5">{{ case.case_number }}</p>
     </div>
 
     <div class="flex items-center gap-2 shrink-0">
       {% if case.overdue_count %}
-      <span class="inline-flex items-center justify-center min-w-[20px] h-5 rounded-full bg-[#DC7C7C] text-white text-xs font-bold px-1.5"
+      <span class="inline-flex items-center justify-center min-w-[20px] h-5 rounded-full bg-coral-400 text-white text-[10px] font-bold px-1.5"
             title="{{ case.overdue_count }} overdue deadline{{ case.overdue_count|pluralize }}">
         {{ case.overdue_count }}
       </span>
@@ -23,13 +23,17 @@
       {% if case.next_deadline_date %}
       {% days_until case.next_deadline_date as days %}
       <span class="inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium
-                   {% if days <= 0 %}bg-[#DC7C7C]/10 text-[#DC7C7C] border border-[#DC7C7C]/25
-                   {% elif days <= 3 %}bg-[#D4956A]/10 text-[#D4956A] border border-[#D4956A]/25
-                   {% elif days <= 7 %}bg-[#C4A94D]/10 text-[#C4A94D] border border-[#C4A94D]/25
-                   {% else %}bg-peach-50 text-peach-900/60{% endif %}">
+                   {% if days <= 0 %}bg-coral-50 text-coral-500 border border-coral-200
+                   {% elif days <= 3 %}bg-amber-50 text-amber-300 border border-amber-200
+                   {% elif days <= 7 %}bg-walnut-50 text-walnut-500
+                   {% else %}bg-cream-50 text-walnut-400{% endif %}">
         {% if days < 0 %}{{ case.next_deadline_date|date:"M j" }}{% elif days == 0 %}Today{% elif days == 1 %}Tomorrow{% else %}{{ case.next_deadline_date|date:"M j" }}{% endif %}
       </span>
       {% endif %}
+
+      <svg class="w-4 h-4 text-walnut-200 group-hover:text-walnut-400 transition-colors duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+      </svg>
     </div>
   </div>
 </a>

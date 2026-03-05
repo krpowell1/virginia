@@ -1,26 +1,26 @@
 <div>
   {% if activities %}
-  <div class="bg-peach-50 rounded-xl border border-peach-100 shadow-warm">
-    <div class="divide-y divide-peach-100">
+  <div class="bg-white rounded-card border border-cream-200 shadow-warm">
+    <div class="divide-y divide-cream-200">
       {% for activity in activities %}
       <div class="px-5 py-3.5">
         <div class="flex items-start gap-3">
           <!-- Timeline dot -->
           <div class="mt-1.5 w-2 h-2 rounded-full shrink-0
-                      {% if 'CREATED' in activity.action %}bg-emerald-400
-                      {% elif 'COMPLETED' in activity.action %}bg-[#7C9CB8]
-                      {% elif 'UPDATED' in activity.action %}bg-[#D4956A]
+                      {% if 'CREATED' in activity.action %}bg-sage-400
+                      {% elif 'COMPLETED' in activity.action %}bg-sky-300
+                      {% elif 'UPDATED' in activity.action %}bg-amber-300
                       {% elif 'AUTO_GENERATED' in activity.action %}bg-violet-400
-                      {% else %}bg-peach-300{% endif %}">
+                      {% else %}bg-walnut-200{% endif %}">
           </div>
           <div class="min-w-0 flex-1">
-            <p class="text-sm text-peach-900/80">{{ activity.description }}</p>
+            <p class="text-sm text-walnut-600">{{ activity.description }}</p>
             <div class="flex items-center gap-2 mt-1">
-              <span class="text-xs text-[#9B8A82]">{{ activity.timestamp|date:"M j, Y g:i A" }}</span>
+              <span class="text-xs text-walnut-400">{{ activity.timestamp|date:"M j, Y g:i A" }}</span>
               {% if activity.user %}
-              <span class="text-xs text-[#9B8A82]">&middot; {{ activity.user.get_full_name|default:activity.user.username }}</span>
+              <span class="text-xs text-walnut-400">&middot; {{ activity.user.get_full_name|default:activity.user.username }}</span>
               {% else %}
-              <span class="text-xs text-[#9B8A82]">&middot; System</span>
+              <span class="text-xs text-walnut-400">&middot; System</span>
               {% endif %}
             </div>
           </div>
@@ -30,8 +30,8 @@
     </div>
   </div>
   {% else %}
-  <div class="bg-peach-50 rounded-xl border border-peach-100 shadow-warm px-5 py-12 text-center">
-    <p class="text-base text-[#9B8A82]">No activity recorded</p>
+  <div class="bg-white rounded-card border border-cream-200 shadow-warm px-5 py-12 text-center">
+    <p class="text-sm text-walnut-400">No activity recorded</p>
   </div>
   {% endif %}
 </div>

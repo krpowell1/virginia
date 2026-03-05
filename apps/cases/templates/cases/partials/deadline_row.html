@@ -1,105 +1,117 @@
 {% load cases_tags %}
-<div class="deadline-item px-5 py-3.5 {% if deadline.completed %}opacity-50{% endif %}">
-  <div class="flex items-center justify-between gap-3">
-    <a href="{% url 'cases:detail' deadline.case.pk %}?tab=deadlines"
-       class="min-w-0 flex-1 group">
-      <div class="flex items-center gap-2">
-        {% if show_case %}
-        <span class="text-sm font-medium text-peach-900 group-hover:text-peach-600 transition-colors truncate">
-          {{ deadline.case.short_name|default:deadline.case.caption }}
-        </span>
-        <span class="text-peach-300">&middot;</span>
+<div class="deadline-item flex {% if deadline.completed %}opacity-50{% endif %}">
+  <!-- Urgency bar -->
+  <div class="w-1 shrink-0 rounded-l-card
+    {% if deadline.completed %}bg-walnut-100
+    {% elif deadline.days_remaining < 0 %}bg-coral-400
+    {% elif deadline.days_remaining == 0 %}bg-amber-300
+    {% elif deadline.days_remaining <= 3 %}bg-amber-300
+    {% elif deadline.days_remaining <= 7 %}bg-walnut-200
+    {% else %}bg-walnut-100{% endif %}">
+  </div>
+
+  <div class="flex-1 min-w-0 px-4 py-3.5">
+    <div class="flex items-center justify-between gap-3">
+      <a href="{% url 'cases:detail' deadline.case.pk %}?tab=deadlines"
+         class="min-w-0 flex-1 group">
+        <div class="flex items-center gap-2">
+          {% if show_case %}
+          <span class="text-sm font-medium text-walnut-800 group-hover:text-terra-500 transition-colors duration-200 truncate">
+            {{ deadline.case.short_name|default:deadline.case.caption }}
+          </span>
+          <span class="text-walnut-200">&middot;</span>
+          {% endif %}
+          <span class="text-sm {% if show_case %}text-walnut-500{% else %}text-walnut-800 font-medium{% endif %} truncate">
+            {{ deadline.title }}
+          </span>
+        </div>
+        {% if deadline.rule_reference %}
+        <p class="text-xs text-walnut-400 mt-0.5">{{ deadline.rule_reference }}</p>
         {% endif %}
-        <span class="text-sm {% if show_case %}text-peach-900/70{% else %}text-peach-900 font-medium{% endif %} truncate">
-          {{ deadline.title }}
+      </a>
+
+      <div class="flex items-center gap-2 shrink-0">
+        {% if not deadline.is_extendable %}
+        <span class="inline-flex items-center rounded-full bg-walnut-800 px-2 py-0.5 text-[10px] font-bold text-cream-100 uppercase tracking-wide">
+          Non-ext.
         </span>
+        {% endif %}
+
+        {% if deadline.completed %}
+        <span class="inline-flex items-center rounded-full bg-sage-50 px-2.5 py-0.5 text-xs font-medium text-sage-500">
+          Done
+        </span>
+        {% else %}
+        {% with days=deadline.days_remaining %}
+        <span class="inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold
+                     {% if days < 0 %}bg-coral-50 text-coral-500 border border-coral-200
+                     {% elif days == 0 %}bg-amber-50 text-amber-300 border border-amber-200
+                     {% elif days <= 3 %}bg-amber-50 text-amber-300 border border-amber-200
+                     {% elif days <= 7 %}bg-walnut-50 text-walnut-500
+                     {% else %}bg-cream-50 text-walnut-400{% endif %}">
+          {% if days < 0 %}{{ days|abs_val }}d overdue{% elif days == 0 %}Today{% elif days == 1 %}Tomorrow{% else %}{{ days }}d{% endif %}
+        </span>
+        {% endwith %}
+        {% endif %}
       </div>
-      {% if deadline.rule_reference %}
-      <p class="text-xs text-[#9B8A82] mt-0.5">{{ deadline.rule_reference }}</p>
-      {% endif %}
-    </a>
+    </div>
 
-    <div class="flex items-center gap-2 shrink-0">
-      {% if not deadline.is_extendable %}
-      <span class="inline-flex items-center rounded-full bg-red-50 border border-red-200 px-2 py-0.5 text-xs font-medium text-red-600">
-        Non-ext.
-      </span>
-      {% endif %}
+    {% if not deadline.completed %}
+    <div class="flex items-center gap-2 mt-2.5" x-data="{ extending: false }">
+      <!-- Mark complete -->
+      <form method="post"
+            action="{% url 'cases:deadline-complete' deadline.case.pk deadline.pk %}"
+            hx-post="{% url 'cases:deadline-complete' deadline.case.pk deadline.pk %}"
+            hx-target="closest .deadline-item"
+            hx-swap="outerHTML">
+        {% csrf_token %}
+        <button type="submit"
+                class="inline-flex items-center rounded-card border border-cream-200 bg-white px-2.5 py-1 text-xs font-medium text-walnut-500 hover:bg-cream-50 hover:border-walnut-200 transition-colors duration-200">
+          <svg class="w-3.5 h-3.5 mr-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+          </svg>
+          Complete
+        </button>
+      </form>
 
-      {% if deadline.completed %}
-      <span class="inline-flex items-center rounded-full bg-peach-50 px-2.5 py-0.5 text-xs font-medium text-[#9B8A82]">
-        Done
-      </span>
-      {% else %}
-      {% with days=deadline.days_remaining %}
-      <span class="inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-bold
-                   {% if days < 0 %}bg-[#DC7C7C]/10 text-[#DC7C7C] border border-[#DC7C7C]/25
-                   {% elif days == 0 %}bg-[#D4956A]/10 text-[#D4956A] border border-[#D4956A]/25
-                   {% elif days <= 3 %}bg-[#D4956A]/10 text-[#D4956A] border border-[#D4956A]/25
-                   {% elif days <= 7 %}bg-[#C4A94D]/10 text-[#C4A94D] border border-[#C4A94D]/25
-                   {% else %}bg-peach-50 text-peach-900/60{% endif %}">
-        {% if days < 0 %}{{ days|abs_val }}d overdue{% elif days == 0 %}Today{% else %}{{ days }}d{% endif %}
-      </span>
-      {% endwith %}
+      {% if deadline.is_extendable %}
+      <!-- Extend toggle -->
+      <button type="button"
+              @click="extending = !extending"
+              x-show="!extending"
+              class="inline-flex items-center rounded-card border border-cream-200 bg-white px-2.5 py-1 text-xs font-medium text-walnut-500 hover:bg-cream-50 hover:border-walnut-200 transition-colors duration-200">
+        <svg class="w-3.5 h-3.5 mr-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
+        </svg>
+        Extend
+      </button>
+
+      <!-- Extend form -->
+      <form x-show="extending"
+            x-cloak
+            x-transition
+            method="post"
+            action="{% url 'cases:deadline-extend' deadline.case.pk deadline.pk %}"
+            hx-post="{% url 'cases:deadline-extend' deadline.case.pk deadline.pk %}"
+            hx-target="closest .deadline-item"
+            hx-swap="outerHTML"
+            class="flex items-center gap-2 flex-1">
+        {% csrf_token %}
+        <input type="date" name="new_due_date" required
+               class="rounded-card border border-cream-200 px-2 py-1 text-xs text-walnut-800 focus:border-terra-400 focus:ring-1 focus:ring-terra-400 focus:outline-none">
+        <input type="text" name="reason" required placeholder="Reason"
+               class="flex-1 rounded-card border border-cream-200 px-2 py-1 text-xs text-walnut-800 placeholder-walnut-300 focus:border-terra-400 focus:ring-1 focus:ring-terra-400 focus:outline-none">
+        <button type="submit"
+                class="rounded-card bg-terra-400 px-2.5 py-1 text-xs font-medium text-white hover:bg-terra-500 transition-colors duration-200">
+          Save
+        </button>
+        <button type="button" @click="extending = false"
+                class="rounded-card border border-cream-200 px-2.5 py-1 text-xs text-walnut-400 hover:bg-cream-50 transition-colors duration-200">
+          Cancel
+        </button>
+      </form>
       {% endif %}
     </div>
-  </div>
-
-  {% if not deadline.completed %}
-  <div class="flex items-center gap-2 mt-2" x-data="{ extending: false }">
-    <!-- Mark complete -->
-    <form method="post"
-          action="{% url 'cases:deadline-complete' deadline.case.pk deadline.pk %}"
-          hx-post="{% url 'cases:deadline-complete' deadline.case.pk deadline.pk %}"
-          hx-target="closest .deadline-item"
-          hx-swap="outerHTML">
-      {% csrf_token %}
-      <button type="submit"
-              class="inline-flex items-center rounded-lg border border-peach-100 bg-white px-2.5 py-1 text-xs font-medium text-peach-900/70 hover:bg-peach-50 hover:border-peach-300 transition-colors">
-        <svg class="w-3.5 h-3.5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-        </svg>
-        Complete
-      </button>
-    </form>
-
-    {% if deadline.is_extendable %}
-    <!-- Extend toggle -->
-    <button type="button"
-            @click="extending = !extending"
-            x-show="!extending"
-            class="inline-flex items-center rounded-lg border border-peach-100 bg-white px-2.5 py-1 text-xs font-medium text-peach-900/70 hover:bg-peach-50 hover:border-peach-300 transition-colors">
-      <svg class="w-3.5 h-3.5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
-      </svg>
-      Extend
-    </button>
-
-    <!-- Extend form -->
-    <form x-show="extending"
-          x-cloak
-          x-transition
-          method="post"
-          action="{% url 'cases:deadline-extend' deadline.case.pk deadline.pk %}"
-          hx-post="{% url 'cases:deadline-extend' deadline.case.pk deadline.pk %}"
-          hx-target="closest .deadline-item"
-          hx-swap="outerHTML"
-          class="flex items-center gap-2 flex-1">
-      {% csrf_token %}
-      <input type="date" name="new_due_date" required
-             class="rounded-lg border border-peach-100 px-2 py-1 text-xs text-peach-900 focus:border-peach-300 focus:ring-1 focus:ring-peach-300 focus:outline-none">
-      <input type="text" name="reason" required placeholder="Reason"
-             class="flex-1 rounded-lg border border-peach-100 px-2 py-1 text-xs text-peach-900 placeholder-[#9B8A82] focus:border-peach-300 focus:ring-1 focus:ring-peach-300 focus:outline-none">
-      <button type="submit"
-              class="rounded-lg bg-peach-600 px-2.5 py-1 text-xs font-medium text-white hover:bg-peach-700 transition-colors">
-        Save
-      </button>
-      <button type="button" @click="extending = false"
-              class="rounded-lg border border-peach-100 px-2.5 py-1 text-xs text-[#9B8A82] hover:bg-peach-50 transition-colors">
-        Cancel
-      </button>
-    </form>
     {% endif %}
   </div>
-  {% endif %}
 </div>

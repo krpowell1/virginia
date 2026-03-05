@@ -3,36 +3,51 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Sign in - DCM</title>
+  <title>Sign in - Defense Case Manager</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="theme-color" content="#FECDD3">
+  <meta name="theme-color" content="#2D2319">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
   tailwind.config = {
     theme: {
       extend: {
         fontFamily: {
-          sans: ['"SF Pro Display"', '"SF Pro Text"', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'system-ui', 'sans-serif'],
-        },
-        fontSize: {
-          'xs': ['0.8125rem', { lineHeight: '1.25rem' }],
-          'sm': ['0.9375rem', { lineHeight: '1.5rem' }],
+          sans: ['"DM Sans"', 'system-ui', 'sans-serif'],
+          serif: ['"DM Serif Display"', 'Georgia', 'serif'],
         },
         colors: {
-          peach: {
-            50: '#FFF8F6',
-            100: '#F0E0DA',
-            200: '#FECDD3',
-            300: '#E8A0A0',
-            600: '#A06060',
-            700: '#8B5252',
-            900: '#4A3728',
+          walnut: {
+            200: '#C4B5A8',
+            300: '#9B8A7A',
+            400: '#6B5D52',
+            600: '#4A3F35',
+            800: '#2D2319',
+          },
+          terra: {
+            400: '#C4866B',
+            500: '#B0755C',
+          },
+          cream: {
+            50: '#FFFBF8',
+            100: '#FFF5EE',
+            200: '#F0E6DC',
+          },
+          coral: {
+            50: '#FDF2F2',
+            200: '#F5D0D0',
+            500: '#C07070',
           },
         },
+        borderRadius: {
+          'card': '8px',
+        },
         boxShadow: {
-          'warm': '0 1px 3px rgba(74,55,40,0.08)',
-          'warm-md': '0 4px 6px rgba(74,55,40,0.10)',
+          'warm': '0 1px 3px rgba(45,35,25,0.08)',
+          'warm-md': '0 4px 6px rgba(45,35,25,0.10)',
         },
       }
     }
@@ -40,22 +55,20 @@
   </script>
   <style>
     [x-cloak] { display: none !important; }
-    body { font-size: 16px; line-height: 1.6; letter-spacing: -0.011em; }
   </style>
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3/dist/cdn.min.js"></script>
 </head>
-<body class="h-full bg-[#FFF5F2] flex items-center justify-center px-4"
-      style="font-family: 'SF Pro Display', 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;">
+<body class="h-full bg-cream-50 flex items-center justify-center px-4 font-sans">
 
   <div class="w-full max-w-sm">
     <div class="text-center mb-8">
-      <h1 class="text-2xl font-semibold text-peach-900 tracking-tight">Defense Case Manager</h1>
-      <p class="mt-2 text-sm text-[#9B8A82]">Sign in to continue</p>
+      <h1 class="font-serif text-2xl text-walnut-800 tracking-tight">Defense Case Manager</h1>
+      <p class="mt-2 text-sm text-walnut-400">Sign in to continue</p>
     </div>
 
-    <div class="bg-peach-50 rounded-2xl shadow-warm border border-peach-100 p-6">
+    <div class="bg-white rounded-card shadow-warm-md border border-cream-200 p-6">
       {% if form.errors %}
-      <div class="mb-4 rounded-xl bg-red-50 border border-red-200 px-4 py-3 text-sm text-red-800">
+      <div class="mb-4 rounded-card bg-coral-50 border border-coral-200 px-4 py-3 text-sm text-coral-500">
         Invalid username or password.
       </div>
       {% endif %}
@@ -69,7 +82,7 @@
         <div class="mb-4">
           <button type="button"
                   id="passkey-verification-button"
-                  class="w-full rounded-xl bg-peach-200 px-4 py-3 text-sm font-semibold text-peach-900 hover:bg-peach-300/60 active:bg-peach-300/80 transition-colors flex items-center justify-center gap-2">
+                  class="w-full rounded-card bg-walnut-800 px-4 py-3 text-sm font-semibold text-cream-100 hover:bg-walnut-600 active:bg-walnut-800 transition-colors flex items-center justify-center gap-2">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     d="M12 11c0 1.657-1.343 3-3 3s-3-1.343-3-3 1.343-3 3-3 3 1.343 3 3zm0 0c0 1.657 1.343 3 3 3s3-1.343 3-3-1.343-3-3-3-3 1.343-3 3zm-3 8v-1a4 4 0 014-4h0a4 4 0 014 4v1"/>
@@ -77,16 +90,16 @@
             Sign in with Face ID
           </button>
           <p id="passkey-verification-status-message"
-             class="mt-2 text-center text-sm text-[#9B8A82] hidden"
+             class="mt-2 text-center text-sm text-walnut-400 hidden"
              aria-live="assertive"></p>
         </div>
 
         <div class="relative my-5">
           <div class="absolute inset-0 flex items-center">
-            <div class="w-full border-t border-peach-100"></div>
+            <div class="w-full border-t border-cream-200"></div>
           </div>
           <div class="relative flex justify-center text-xs">
-            <span class="bg-peach-50 px-3 text-[#9B8A82]">or use password</span>
+            <span class="bg-white px-3 text-walnut-400">or use password</span>
           </div>
         </div>
       </template>
@@ -100,28 +113,28 @@
         <input type="hidden" name="next" value="{{ next }}">
 
         <div>
-          <label for="id_username" class="block text-sm font-medium text-peach-900/70 mb-1.5">Username</label>
+          <label for="id_username" class="block text-[11px] font-medium uppercase tracking-[0.08em] text-walnut-400 mb-1.5">Username</label>
           <input type="text"
                  id="id_username"
                  name="username"
                  autocomplete="username webauthn"
                  autofocus
                  required
-                 class="block w-full rounded-xl border border-peach-100 bg-white px-3 py-2.5 text-base text-peach-900 placeholder-[#9B8A82] focus:border-peach-300 focus:ring-1 focus:ring-peach-300 focus:outline-none transition-colors">
+                 class="block w-full rounded-card border border-cream-200 bg-white px-3 py-2.5 text-base text-walnut-800 placeholder-walnut-300 focus:border-terra-400 focus:ring-1 focus:ring-terra-400 focus:outline-none transition-colors">
         </div>
 
         <div>
-          <label for="id_password" class="block text-sm font-medium text-peach-900/70 mb-1.5">Password</label>
+          <label for="id_password" class="block text-[11px] font-medium uppercase tracking-[0.08em] text-walnut-400 mb-1.5">Password</label>
           <input type="password"
                  id="id_password"
                  name="password"
                  autocomplete="current-password"
                  required
-                 class="block w-full rounded-xl border border-peach-100 bg-white px-3 py-2.5 text-base text-peach-900 placeholder-[#9B8A82] focus:border-peach-300 focus:ring-1 focus:ring-peach-300 focus:outline-none transition-colors">
+                 class="block w-full rounded-card border border-cream-200 bg-white px-3 py-2.5 text-base text-walnut-800 placeholder-walnut-300 focus:border-terra-400 focus:ring-1 focus:ring-terra-400 focus:outline-none transition-colors">
         </div>
 
         <button type="submit"
-                class="w-full rounded-xl bg-peach-600 px-4 py-2.5 text-sm font-semibold text-white hover:bg-peach-700 active:bg-peach-700 transition-colors">
+                class="w-full rounded-card bg-walnut-800 px-4 py-2.5 text-sm font-semibold text-cream-100 hover:bg-walnut-600 active:bg-walnut-800 transition-colors">
           Sign in
         </button>
       </form>

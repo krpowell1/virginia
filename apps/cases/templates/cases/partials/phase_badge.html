@@ -1,10 +1,10 @@
-<span class="inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium
+<span class="inline-flex items-center rounded-full px-2 py-0.5 text-[11px] font-medium tracking-wide
 {% if phase == 'PLEADING' %}bg-violet-50 text-violet-700
-{% elif phase == 'DISCOVERY' %}bg-blue-50 text-blue-700
-{% elif phase == 'DISPOSITIVE_MOTIONS' %}bg-indigo-50 text-indigo-700
-{% elif phase == 'TRIAL_PREP' %}bg-amber-50 text-amber-700
-{% elif phase == 'TRIAL' %}bg-orange-50 text-orange-700
-{% elif phase == 'POST_TRIAL' %}bg-rose-50 text-rose-700
-{% elif phase == 'APPEAL' %}bg-red-50 text-red-700
-{% else %}bg-slate-100 text-slate-600
+{% elif phase == 'DISCOVERY' %}bg-sky-50 text-sky-300
+{% elif phase == 'DISPOSITIVE_MOTIONS' %}bg-indigo-50 text-indigo-600
+{% elif phase == 'TRIAL_PREP' %}bg-amber-50 text-amber-400
+{% elif phase == 'TRIAL' %}bg-orange-50 text-orange-600
+{% elif phase == 'POST_TRIAL' %}bg-rose-50 text-rose-600
+{% elif phase == 'APPEAL' %}bg-coral-50 text-coral-500
+{% else %}bg-walnut-50 text-walnut-500
 {% endif %}">{{ phase_display }}</span>
