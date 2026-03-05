@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}What's New - DCM{% endblock %}
+
+{% block content %}
+<div class="max-w-3xl mx-auto px-4 py-6 space-y-6">
+
+  <div class="flex items-center justify-between">
+    <h1 class="text-2xl font-semibold text-peach-900 tracking-tight">What's New</h1>
+    <a href="{% url 'cases:dashboard' %}"
+       class="text-sm text-[#9B8A82] hover:text-peach-900 transition-colors">
+      Back to Dashboard
+    </a>
+  </div>
+
+  {% if entries %}
+  <div class="space-y-4">
+    {% for entry in entries %}
+    <div class="bg-peach-50 rounded-xl border border-peach-100 shadow-warm px-5 py-5">
+      <div class="flex items-center gap-3 mb-2.5">
+        <span class="inline-flex items-center rounded-full bg-peach-200 px-2.5 py-0.5 text-xs font-semibold text-peach-900">
+          v{{ entry.version }}
+        </span>
+        <span class="text-xs text-[#9B8A82]">{{ entry.created_at|date:"F j, Y" }}</span>
+      </div>
+      <h2 class="text-lg font-medium text-peach-900 mb-1.5">{{ entry.title }}</h2>
+      <p class="text-sm text-peach-900/80 leading-relaxed whitespace-pre-wrap">{{ entry.description }}</p>
+    </div>
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="bg-peach-50 rounded-xl border border-peach-100 shadow-warm px-5 py-12 text-center">
+    <p class="text-base text-[#9B8A82]">No updates yet</p>
+  </div>
+  {% endif %}
+
+</div>
+{% endblock %}

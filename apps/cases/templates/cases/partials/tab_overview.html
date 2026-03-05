@@ -1,111 +1,111 @@
 <div class="space-y-6">
 
   <!-- Key Dates -->
-  <section class="bg-white rounded-xl border border-slate-200 shadow-sm">
-    <div class="px-5 py-3 border-b border-slate-100">
-      <h3 class="text-xs font-semibold uppercase tracking-wider text-slate-400">Key Dates</h3>
+  <section class="bg-peach-50 rounded-xl border border-peach-100 shadow-warm">
+    <div class="px-5 py-3 border-b border-peach-100">
+      <h3 class="text-xs font-semibold uppercase tracking-wider text-[#9B8A82]">Key Dates</h3>
     </div>
     <div class="px-5 py-4 grid grid-cols-2 gap-x-6 gap-y-3">
       <div>
-        <dt class="text-xs text-slate-400">Filed</dt>
-        <dd class="text-sm text-slate-800 mt-0.5">{{ case.date_filed|date:"M j, Y"|default:"&mdash;" }}</dd>
+        <dt class="text-xs text-[#9B8A82]">Filed</dt>
+        <dd class="text-sm text-peach-900 mt-0.5">{{ case.date_filed|date:"M j, Y"|default:"&mdash;" }}</dd>
       </div>
       <div>
-        <dt class="text-xs text-slate-400">Served</dt>
-        <dd class="text-sm text-slate-800 mt-0.5">{{ case.date_served|date:"M j, Y"|default:"&mdash;" }}</dd>
+        <dt class="text-xs text-[#9B8A82]">Served</dt>
+        <dd class="text-sm text-peach-900 mt-0.5">{{ case.date_served|date:"M j, Y"|default:"&mdash;" }}</dd>
       </div>
       <div>
-        <dt class="text-xs text-slate-400">Answer Due</dt>
-        <dd class="text-sm text-slate-800 mt-0.5">{{ case.date_answer_due|date:"M j, Y"|default:"&mdash;" }}</dd>
+        <dt class="text-xs text-[#9B8A82]">Answer Due</dt>
+        <dd class="text-sm text-peach-900 mt-0.5">{{ case.date_answer_due|date:"M j, Y"|default:"&mdash;" }}</dd>
       </div>
       <div>
-        <dt class="text-xs text-slate-400">Date of Loss</dt>
-        <dd class="text-sm text-slate-800 mt-0.5">{{ case.date_of_loss|date:"M j, Y"|default:"&mdash;" }}</dd>
+        <dt class="text-xs text-[#9B8A82]">Date of Loss</dt>
+        <dd class="text-sm text-peach-900 mt-0.5">{{ case.date_of_loss|date:"M j, Y"|default:"&mdash;" }}</dd>
       </div>
       <div>
-        <dt class="text-xs text-slate-400">Statute of Limitations</dt>
-        <dd class="text-sm {% if case.statute_of_limitations %}text-slate-800{% else %}text-slate-400{% endif %} mt-0.5">
+        <dt class="text-xs text-[#9B8A82]">Statute of Limitations</dt>
+        <dd class="text-sm {% if case.statute_of_limitations %}text-peach-900{% else %}text-[#9B8A82]{% endif %} mt-0.5">
           {{ case.statute_of_limitations|date:"M j, Y"|default:"&mdash;" }}
         </dd>
       </div>
       <div>
-        <dt class="text-xs text-slate-400">Service Method</dt>
-        <dd class="text-sm text-slate-800 mt-0.5">{{ case.get_service_method_display|default:"&mdash;" }}</dd>
+        <dt class="text-xs text-[#9B8A82]">Service Method</dt>
+        <dd class="text-sm text-peach-900 mt-0.5">{{ case.get_service_method_display|default:"&mdash;" }}</dd>
       </div>
     </div>
   </section>
 
   <!-- Court Info -->
-  <section class="bg-white rounded-xl border border-slate-200 shadow-sm">
-    <div class="px-5 py-3 border-b border-slate-100">
-      <h3 class="text-xs font-semibold uppercase tracking-wider text-slate-400">Court</h3>
+  <section class="bg-peach-50 rounded-xl border border-peach-100 shadow-warm">
+    <div class="px-5 py-3 border-b border-peach-100">
+      <h3 class="text-xs font-semibold uppercase tracking-wider text-[#9B8A82]">Court</h3>
     </div>
     <div class="px-5 py-4 grid grid-cols-2 gap-x-6 gap-y-3">
       <div class="col-span-2">
-        <dt class="text-xs text-slate-400">Court</dt>
-        <dd class="text-sm text-slate-800 mt-0.5">{{ case.court }}</dd>
+        <dt class="text-xs text-[#9B8A82]">Court</dt>
+        <dd class="text-sm text-peach-900 mt-0.5">{{ case.court }}</dd>
       </div>
       <div>
-        <dt class="text-xs text-slate-400">County</dt>
-        <dd class="text-sm text-slate-800 mt-0.5">{{ case.county }}</dd>
+        <dt class="text-xs text-[#9B8A82]">County</dt>
+        <dd class="text-sm text-peach-900 mt-0.5">{{ case.county }}</dd>
       </div>
       <div>
-        <dt class="text-xs text-slate-400">Jurisdiction</dt>
-        <dd class="text-sm text-slate-800 mt-0.5">{{ case.get_jurisdiction_display }}</dd>
+        <dt class="text-xs text-[#9B8A82]">Jurisdiction</dt>
+        <dd class="text-sm text-peach-900 mt-0.5">{{ case.get_jurisdiction_display }}</dd>
       </div>
       <div>
-        <dt class="text-xs text-slate-400">Case Type</dt>
-        <dd class="text-sm text-slate-800 mt-0.5">{{ case.get_case_type_display }}</dd>
+        <dt class="text-xs text-[#9B8A82]">Case Type</dt>
+        <dd class="text-sm text-peach-900 mt-0.5">{{ case.get_case_type_display }}</dd>
       </div>
       <div>
-        <dt class="text-xs text-slate-400">Caption</dt>
-        <dd class="text-sm text-slate-800 mt-0.5">{{ case.caption }}</dd>
+        <dt class="text-xs text-[#9B8A82]">Caption</dt>
+        <dd class="text-sm text-peach-900 mt-0.5">{{ case.caption }}</dd>
       </div>
     </div>
   </section>
 
   <!-- Parties -->
-  <section class="bg-white rounded-xl border border-slate-200 shadow-sm">
-    <div class="px-5 py-3 border-b border-slate-100">
-      <h3 class="text-xs font-semibold uppercase tracking-wider text-slate-400">Parties</h3>
+  <section class="bg-peach-50 rounded-xl border border-peach-100 shadow-warm">
+    <div class="px-5 py-3 border-b border-peach-100">
+      <h3 class="text-xs font-semibold uppercase tracking-wider text-[#9B8A82]">Parties</h3>
     </div>
     <div class="px-5 py-4 grid grid-cols-2 gap-x-6 gap-y-3">
       <div>
-        <dt class="text-xs text-slate-400">Plaintiff</dt>
-        <dd class="text-sm text-slate-800 mt-0.5">{{ case.plaintiff_name }}</dd>
+        <dt class="text-xs text-[#9B8A82]">Plaintiff</dt>
+        <dd class="text-sm text-peach-900 mt-0.5">{{ case.plaintiff_name }}</dd>
       </div>
       <div>
-        <dt class="text-xs text-slate-400">Defendant (our client)</dt>
-        <dd class="text-sm text-slate-800 mt-0.5">{{ case.defendant_name }}</dd>
+        <dt class="text-xs text-[#9B8A82]">Defendant (our client)</dt>
+        <dd class="text-sm text-peach-900 mt-0.5">{{ case.defendant_name }}</dd>
       </div>
     </div>
   </section>
 
   <!-- Insurance -->
   {% if case.insurance_carrier %}
-  <section class="bg-white rounded-xl border border-slate-200 shadow-sm">
-    <div class="px-5 py-3 border-b border-slate-100">
-      <h3 class="text-xs font-semibold uppercase tracking-wider text-slate-400">Insurance</h3>
+  <section class="bg-peach-50 rounded-xl border border-peach-100 shadow-warm">
+    <div class="px-5 py-3 border-b border-peach-100">
+      <h3 class="text-xs font-semibold uppercase tracking-wider text-[#9B8A82]">Insurance</h3>
     </div>
     <div class="px-5 py-4 grid grid-cols-2 gap-x-6 gap-y-3">
       <div>
-        <dt class="text-xs text-slate-400">Carrier</dt>
-        <dd class="text-sm text-slate-800 mt-0.5">{{ case.insurance_carrier }}</dd>
+        <dt class="text-xs text-[#9B8A82]">Carrier</dt>
+        <dd class="text-sm text-peach-900 mt-0.5">{{ case.insurance_carrier }}</dd>
       </div>
       <div>
-        <dt class="text-xs text-slate-400">Claim #</dt>
-        <dd class="text-sm text-slate-800 mt-0.5">{{ case.claim_number|default:"&mdash;" }}</dd>
+        <dt class="text-xs text-[#9B8A82]">Claim #</dt>
+        <dd class="text-sm text-peach-900 mt-0.5">{{ case.claim_number|default:"&mdash;" }}</dd>
       </div>
       <div>
-        <dt class="text-xs text-slate-400">Policy Limit</dt>
-        <dd class="text-sm text-slate-800 mt-0.5">{% if case.policy_limit %}${{ case.policy_limit|floatformat:0 }}{% else %}&mdash;{% endif %}</dd>
+        <dt class="text-xs text-[#9B8A82]">Policy Limit</dt>
+        <dd class="text-sm text-peach-900 mt-0.5">{% if case.policy_limit %}${{ case.policy_limit|floatformat:0 }}{% else %}&mdash;{% endif %}</dd>
       </div>
       <div>
-        <dt class="text-xs text-slate-400">Reserve</dt>
-        <dd class="text-sm text-slate-800 mt-0.5">{% if case.reserve_amount %}${{ case.reserve_amount|floatformat:0 }}{% else %}&mdash;{% endif %}</dd>
+        <dt class="text-xs text-[#9B8A82]">Reserve</dt>
+        <dd class="text-sm text-peach-900 mt-0.5">{% if case.reserve_amount %}${{ case.reserve_amount|floatformat:0 }}{% else %}&mdash;{% endif %}</dd>
       </div>
       <div>
-        <dt class="text-xs text-slate-400">Client Approved</dt>
+        <dt class="text-xs text-[#9B8A82]">Client Approved</dt>
         <dd class="text-sm mt-0.5 {% if case.client_approved %}text-emerald-600{% else %}text-amber-600{% endif %}">
           {% if case.client_approved %}Yes{% else %}Pending{% endif %}
         </dd>
@@ -115,13 +115,13 @@
   {% endif %}
 
   <!-- Affirmative Defenses -->
-  <section class="bg-white rounded-xl border border-slate-200 shadow-sm">
-    <div class="px-5 py-3 border-b border-slate-100">
-      <h3 class="text-xs font-semibold uppercase tracking-wider text-slate-400">Affirmative Defenses</h3>
+  <section class="bg-peach-50 rounded-xl border border-peach-100 shadow-warm">
+    <div class="px-5 py-3 border-b border-peach-100">
+      <h3 class="text-xs font-semibold uppercase tracking-wider text-[#9B8A82]">Affirmative Defenses</h3>
     </div>
     <div class="px-5 py-4 space-y-3">
       <div class="flex items-center justify-between">
-        <span class="text-sm text-slate-700">Contributory Negligence</span>
+        <span class="text-sm text-peach-900/80">Contributory Negligence</span>
         {% if case.pled_contributory_negligence %}
         <span class="inline-flex items-center rounded-full bg-emerald-50 border border-emerald-200 px-2.5 py-0.5 text-xs font-medium text-emerald-700">Pled</span>
         {% else %}
@@ -129,40 +129,40 @@
         {% endif %}
       </div>
       <div class="flex items-center justify-between">
-        <span class="text-sm text-slate-700">Assumption of Risk</span>
+        <span class="text-sm text-peach-900/80">Assumption of Risk</span>
         {% if case.pled_assumption_of_risk %}
         <span class="inline-flex items-center rounded-full bg-emerald-50 border border-emerald-200 px-2.5 py-0.5 text-xs font-medium text-emerald-700">Pled</span>
         {% else %}
-        <span class="inline-flex items-center rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-medium text-slate-500">Not pled</span>
+        <span class="inline-flex items-center rounded-full bg-peach-50 border border-peach-100 px-2.5 py-0.5 text-xs font-medium text-[#9B8A82]">Not pled</span>
         {% endif %}
       </div>
     </div>
   </section>
 
   <!-- Team -->
-  <section class="bg-white rounded-xl border border-slate-200 shadow-sm">
-    <div class="px-5 py-3 border-b border-slate-100">
-      <h3 class="text-xs font-semibold uppercase tracking-wider text-slate-400">Team</h3>
+  <section class="bg-peach-50 rounded-xl border border-peach-100 shadow-warm">
+    <div class="px-5 py-3 border-b border-peach-100">
+      <h3 class="text-xs font-semibold uppercase tracking-wider text-[#9B8A82]">Team</h3>
     </div>
     <div class="px-5 py-4 grid grid-cols-2 gap-x-6 gap-y-3">
       <div>
-        <dt class="text-xs text-slate-400">Supervising Partner</dt>
-        <dd class="text-sm text-slate-800 mt-0.5">{{ case.supervising_partner }}</dd>
+        <dt class="text-xs text-[#9B8A82]">Supervising Partner</dt>
+        <dd class="text-sm text-peach-900 mt-0.5">{{ case.supervising_partner }}</dd>
       </div>
       <div>
-        <dt class="text-xs text-slate-400">Paralegal</dt>
-        <dd class="text-sm text-slate-800 mt-0.5">{{ case.assigned_paralegal }}</dd>
+        <dt class="text-xs text-[#9B8A82]">Paralegal</dt>
+        <dd class="text-sm text-peach-900 mt-0.5">{{ case.assigned_paralegal }}</dd>
       </div>
     </div>
   </section>
 
   {% if case.description %}
-  <section class="bg-white rounded-xl border border-slate-200 shadow-sm">
-    <div class="px-5 py-3 border-b border-slate-100">
-      <h3 class="text-xs font-semibold uppercase tracking-wider text-slate-400">Description</h3>
+  <section class="bg-peach-50 rounded-xl border border-peach-100 shadow-warm">
+    <div class="px-5 py-3 border-b border-peach-100">
+      <h3 class="text-xs font-semibold uppercase tracking-wider text-[#9B8A82]">Description</h3>
     </div>
     <div class="px-5 py-4">
-      <p class="text-sm text-slate-700 whitespace-pre-wrap">{{ case.description }}</p>
+      <p class="text-sm text-peach-900/80 whitespace-pre-wrap">{{ case.description }}</p>
     </div>
   </section>
   {% endif %}

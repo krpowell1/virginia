@@ -1,0 +1,51 @@
+Rule 50.
+Judgment as a matter of law in actions tried by jury; alternative motion for
+new trial; conditional rulings.
+(a) Judgment as a matter of law.
+(1) If during a trial by jury a party has been fully heard on an issue and
+there is no legally sufficient evidentiary basis for a reasonable jury to find for that
+party on that issue, the court may determine the issue against that party and may
+grant a motion for judgment as a matter of law against that party with respect to a
+claim or defense that cannot under the controlling law be maintained or defeated
+without a favorable finding on that issue.
+(2) Motions for judgment as a matter of law may be made at any time
+before submission of the case to the jury. Such a motion shall specify the
+judgment sought and the law and the facts on which the moving party is entitled
+to the judgment.
+(b) Renewal of motion for judgment after trial; alternative motion for new
+trial. Whenever a motion for a judgment as a matter of law made at the close of
+all the evidence is denied or for any reason is not granted, the court is deemed to
+have submitted the action to the jury subject to a later determination of the legal
+questions raised by the motion. Such a motion may be renewed by service and
+filing not later than thirty (30) days after entry of judgment. A motion for a new
+trial under Rule 59 may be joined with a renewal of the motion for a judgment as
+a matter of law, or a new trial may be requested in the alternative. If a verdict was
+returned, the court may, in disposing of the renewed motion, allow the judgment
+to stand or may reopen the judgment and either order a new trial or direct the
+entry of judgment as a matter of law. If no verdict was returned the court may, in
+disposing of the renewed motion, direct the entry of judgment as a matter of law
+or may order a new trial.
+(c) Same: Conditional rulings on grant of motion for judgment as a matter
+of law.
+(1) If the renewed motion for judgment as a matter of law is granted, the
+court shall also rule on the motion for a new trial, if any, by determining whether it
+should be granted if the judgment is thereafter vacated or reversed, and shall
+specify the grounds for granting or denying the motion for the new trial. If the
+motion for a new trial is thus conditionally granted, the order thereon does not
+affect the finality of the judgment. In case the motion for a new trial has been
+conditionally granted and the judgment is reversed on appeal, the new trial shall
+proceed unless the appellate court has otherwise ordered. In case the motion for
+a new trial has been conditionally denied, the appellee on appeal may assert
+error in that denial; and if the judgment is reversed on appeal, subsequent
+proceedings shall be in accordance with the order of the appellate court.
+(2) The party against whom judgment as a matter of law has been entered
+may file a motion for a new trial pursuant to Rule 59 not later than thirty (30) days
+after entry of the judgment.
+(d) Same: Denial of motion for judgment as a matter of law. If the motion
+for judgment as a matter of law is denied, the party who prevailed on the motion
+may, as appellee, assert grounds entitling the party to a new trial in the event the
+appellate court concludes that the trial court erred in denying the motion for
+judgment. If the appellate court reverses the judgment, nothing in this rule
+precludes it from determining that the appellee is entitled to a new trial, or from
+directing the trial court to determine whether a new trial shall be granted.
+(dc) District court rule. Rule 50 does not apply in the district courts.

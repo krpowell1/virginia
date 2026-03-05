@@ -1,0 +1,49 @@
+Rule 8.
+General rules of pleading.
+(a) Claims for relief. A pleading which sets forth a claim for relief, whether
+an original claim, counterclaim, cross-claim, or third-party claim, shall contain (1)
+a short and plain statement of the claim showing that the pleader is entitled to
+relief, and (2) a demand for judgment for the relief the pleader seeks. Relief in
+the alternative or of several different types may be demanded.
+(b) Defenses; form of denials. A party shall state in short and plain terms
+the party’s defenses to each claim asserted and shall admit or deny the
+averments upon which the adverse party relies. If a party is without knowledge or
+information sufficient to form a belief as to the truth of an averment, the party
+shall so state, and this has the effect of a denial. Denials shall fairly meet the
+substance of the averments denied. When a pleader intends in good faith to deny
+only a part or a qualification of an averment, the party shall specify so much of it
+as is true and material and shall deny only the remainder. Unless the pleader
+intends in good faith to controvert all the averments of the preceding pleading,
+the pleader may make denials as specific denials of designated averments or
+paragraphs, or may generally deny all the averments except such designated
+averments or paragraphs as the pleader expressly admits; but, when the pleader
+does so intend to controvert all its averments, the pleader may do so by general
+denial subject to the obligations set forth in Rule 11.
+(c) Affirmative defenses. In pleading to a preceding pleading, a party shall
+set forth affirmatively accord and satisfaction, arbitration and award, assumption
+of risk, contributory negligence, discharge in bankruptcy, duress, estoppel, failure
+of consideration, fraud, illegality, injury by fellow servant, laches, license,
+payment, release, res judicata, statute of frauds, statute of limitations, waiver,
+and any other matter constituting an avoidance or affirmative defense. When a
+party has mistakenly designated a defense as a counterclaim or a counterclaim
+as a defense, the court on terms, if justice so requires, shall treat the pleading as
+if there had been a proper designation.
+(d) Effect of failure to deny. Averments in a pleading to which a responsive
+pleading is required, other than those as to the amount of damage, are admitted
+when not denied in the responsive pleading. Averments in a pleading to which no
+responsive pleading is required or permitted shall be taken as denied or avoided.
+(e) Pleading to be concise and direct; consistency.
+(1) Each averment of a pleading shall be simple, concise, and direct. No
+technical forms of pleading or motions are required.
+(2) A party may set forth two or more statements of a claim or defense
+alternatively or hypothetically, either in one count or defense or in separate
+counts or defenses. When two or more statements are made in the alternative
+and one of them if made independently would be sufficient, the pleading is not
+made insufficient by the insufficiency of one or more of the alternative
+statements. A party may also state as many separate claims or defenses as the
+party has regardless of consistency and whether based on legal or on equitable
+grounds, or on both. All statements shall be made subject to the obligations set
+forth in Rule 11.
+(f) Construction of pleadings. All pleadings shall be so construed as to do
+substantial justice.
+(dc) District court rule. Rule 8 applies in the district courts.

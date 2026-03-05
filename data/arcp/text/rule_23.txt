@@ -1,0 +1,87 @@
+Rule 23.
+Class actions.
+(a) Prerequisites to a class action. One or more members of a class may
+sue or be sued as representative parties on behalf of all only if (1) the class is so
+numerous that joinder of all members is impracticable, (2) there are questions of
+law or fact common to the class, (3) the claims or defenses of the representative
+parties are typical of the claims or defenses of the class, and (4) the
+representative parties will fairly and adequately protect the interests of the class.
+(b) Class actions maintainable. An action may be maintained as a class
+action if the prerequisites of subdivision (a) are satisfied, and in addition:
+(1) the prosecution of separate actions by or against individual members
+of the class would create a risk of
+(A) inconsistent or varying adjudications with respect to individual
+members of the class which would establish incompatible standards of
+conduct for the party opposing the class, or
+(B) adjudications with respect to individual members of the class which
+would as a practical matter be dispositive of the interests of the other
+members not parties to the adjudications or substantially impair or
+impede their ability to protect their interests; or
+(2) the party opposing the class has acted or refused to act on grounds
+generally applicable to the class, thereby making appropriate final
+injunctive relief or corresponding declaratory relief with respect to the
+class as a whole; or
+(3) the court finds that the questions of law or fact common to the
+members of the class predominate over any questions affecting only
+individual members, and that a class action is superior to other available
+methods for the fair and efficient adjudication of the controversy. The
+matters pertinent to the findings include: (A) the interest of members of the
+class in individually controlling the prosecution or defense of separate
+actions; (B) the extent and nature of any litigation concerning the
+controversy already commenced by or against members of the class; (C)
+the desirability or undesirability of concentrating the litigation of the claims
+in the particular forum; (D) the difficulties likely to be encountered in the
+management of a class action.
+(c) Determination by order whether class action to be maintained; notice;
+judgment; actions conducted partially as class actions.
+(1) At an early practicable time, consistent with Alabama statutory law, the
+court shall determine by order whether an action brought as a class action
+is to be so maintained. An order that grants or denies class certification
+may be altered or amended before final judgment.
+(2) For any class certified under Rule 23(b)(1) or (b)(2), the court may
+direct appropriate notice to the class. For any class certified under Rule
+23(b)(3) -- or upon ordering notice under Rule 23(e) to a class proposed to
+be certified for purposes of settlement under Rule 23(b)(3) -- the court
+must direct to class members the best notice that is practicable under the
+circumstances, including individual notice to all members who can be
+identified through reasonable effort. The notice may be by one or more of
+the following: United States mail, electronic means, or other appropriate
+means. The notice shall advise each member that (A) the court will
+exclude the member from the class if the member so requests by a
+specified date; (B) the judgment, whether favorable or not, will include all
+members who do not request exclusion; and (C) any member who does
+not request exclusion may, if the member desires, enter an appearance
+through counsel.
+(3) The judgment in an action maintained as a class action under
+subdivision (b)(1) or (b)(2), whether or not favorable to the class, shall
+include and describe those whom the court finds to be members of the
+class. The judgment in an action maintained as a class action under
+subdivision (b)(3), whether or not favorable to the class, shall include and
+specify or describe those to whom the notice provided in subdivision (c)(2)
+was directed, and who have not requested exclusion, and whom the court
+finds to be members of the class.
+(4) When appropriate (A) an action may be brought or maintained as a
+class action with respect to particular issues, or (B) a class may be divided
+into subclasses and each subclass treated as a class, and the provisions
+of this rule shall then be construed and applied accordingly.
+(d) Orders in conduct of actions. In the conduct of actions to which this
+rule applies, the court may make appropriate orders: (1) determining the course
+of proceedings or prescribing measures to prevent undue repetition or
+complication in the presentation of evidence or argument; (2) requiring, for the
+protection of the members of the class or otherwise for the fair conduct of the
+action, that notice be given in such manner as the court may direct to some or all
+of the members of any step in the action, or of the proposed extent of the
+judgment, or of the opportunity of members to signify whether they consider the
+representation fair and adequate, to intervene and present claims or defenses, or
+otherwise to come into the action; (3) imposing conditions on the representative
+parties or on intervenors; (4) requiring that the pleadings be amended to
+eliminate therefrom allegations as to representation of absent persons, and that
+the action proceed accordingly; (5) dealing with similar procedural matters. The
+orders may be combined with an order under Rule 16, and may be altered or
+amended as may be desirable from time to time.
+(e) Settlement, voluntary dismissal or compromise. The claims, issues, or
+defenses of a certified class -- or a class proposed to be certified for purposes of
+settlement -- may be settled, voluntarily dismissed, or compromised only with the
+court's approval, and notice of the proposed dismissal or compromise shall be
+given to all members of the class in such manner as the court directs.
+(dc) District court rule. Rule 23 does not apply in the district courts.

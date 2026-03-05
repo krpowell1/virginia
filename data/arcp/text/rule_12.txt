@@ -1,0 +1,95 @@
+Rule 12.
+Defenses and objections—When and how presented—By pleading or
+motion—Motion for judgment on the pleadings.
+(a) When presented. A defendant shall serve an answer within thirty (30)
+days after the service of the summons and complaint upon that defendant except
+when service is made by publication and a different time is prescribed under the
+applicable procedure. A party served with a pleading stating a cross-claim
+against that party shall serve an answer thereto within thirty (30) days after the
+service upon that party. The plaintiff shall serve a reply to a counterclaim in the
+answer within thirty (30) days after service of the answer or, if a reply is ordered
+by the court, within thirty (30) days after service of the order, unless the order
+otherwise directs. The service of a motion permitted under this rule alters these
+periods to time as follows, unless a different time is fixed by order of the court: (1)
+if the court denies the motion or postpones its disposition until the trial on the
+merits, the responsive pleading shall be served within ten (10) days after notice
+of the court’s action; (2) if the court grants a motion for a more definite statement
+the responsive pleading shall be served within ten (10) days after the service of
+the more definite statement. Proceedings to modify, cite for contempt, or similar
+motions in divorce proceedings shall not be considered as original pleadings
+within the meaning of this rule.
+(b) How presented. Every defense, in law or fact, to a claim for relief in
+any pleading, whether a claim, counterclaim, cross-claim, or third-party claim,
+shall be asserted in the responsive pleading thereto if one is required, except that
+the following defenses may at the option of the pleader be made by motion: (1)
+lack of jurisdiction over the subject matter, (2) lack of jurisdiction over the person,
+(3) improper venue, (4) insufficiency of process, (5) insufficiency of service of
+process, (6) failure to state a claim upon which relief can be granted, (7) failure to
+join a party under Rule 19. A motion making any of these defenses shall be
+made before pleading if a further pleading is permitted. No defense or objection
+is waived by being joined with one or more other defenses or objections in a
+responsive pleading or motion. If a pleading sets forth a claim for relief to which
+the adverse party is not required to serve a responsive pleading, the adverse
+party may assert at the trial any defense in law or fact to that claim for relief. If,
+on a motion asserting the defense numbered (6) to dismiss for failure of the
+pleading to state a claim upon which relief can be granted, matters outside the
+pleading are presented to and not excluded by the court, the motion shall be
+treated as one for summary judgment and disposed of as provided in Rule 56,
+and all parties shall be given reasonable opportunity to present all material made
+pertinent to such a motion by Rule 56.
+(c) Motion for judgment on the pleadings. After the pleadings are closed
+but within such time as not to delay the trial, any party may move for judgment on
+the pleadings. If, on a motion for judgment on the pleadings, matters outside the
+pleadings are presented to and not excluded by the court, the motion shall be
+treated as one for summary judgment and disposed of as provided in Rule 56,
+and all parties shall be given reasonable opportunity to present all material made
+pertinent to such a motion by Rule 56.
+(d) Preliminary hearings. The defenses specifically enumerated (1)-(7) in
+subdivision (b) of this rule, whether made in a pleading or by motion, and the
+motion for judgment mentioned in subdivision (c) of this rule shall be heard and
+determined before trial on application of any party, unless the court orders that
+the hearing and determination thereof be deferred until the trial.
+(e) Motion for more definite statement. If a pleading to which a responsive
+pleading is permitted is so vague or ambiguous that a party cannot reasonably
+be required to frame a responsive pleading, the party may move for a more
+definite statement before interposing a responsive pleading. The motion shall
+point out the defects complained of and the details desired. If the motion is
+granted and the order of the court is not obeyed within ten (10) days after notice
+of the order or within such other time as the court may fix, the court may strike
+the pleading to which the motion was directed or make such order as it deems
+just.
+(f) Motion to strike. Upon motion made by a party before responding to a
+pleading or, if no responsive pleading is permitted by these rules, upon motion
+made by a party within thirty (30) days after the service of the pleading upon the
+party or upon the court’s own initiative at any time, the court may order stricken
+from any pleading any insufficient defense or any redundant, immaterial,
+impertinent, or scandalous matter.
+(g) Consolidation of defenses in motion. A party who makes a motion
+under this rule may join with it any other motions herein provided for and then
+available to the party. If a party makes a motion under this rule but omits
+therefrom any defense or objection then available to the party which this rule
+permits to be raised by motion, the party shall not thereafter make a motion
+based on the defense or objection so omitted, except a motion as provided in
+subdivision (h)(2) hereof on any of the grounds there stated.
+(h) Waiver or preservation of certain defenses.
+(1) A defense of lack of jurisdiction over the person, improper venue,
+insufficiency of process, or insufficiency of service of process is waived (A) if
+omitted from a motion in the circumstances described in subdivision (g), or (B) if
+it is neither made by motion under this rule nor included in a responsive pleading
+or an amendment thereof permitted by Rule 15(a) to be made as a matter of
+course.
+(2) A defense of failure to state a claim upon which relief can be granted, a
+defense of failure to join a party indispensable under Rule 19, and an objection of
+failure to state a legal defense to a claim may be made in any pleading permitted
+or ordered under Rule 7(a), or by motion for judgment on the pleadings, or at the
+trial on the merits.
+(3) Whenever it appears by suggestion of the parties or otherwise that the
+court lacks jurisdiction of the subject matter, the court shall dismiss the action.
+(dc) District court rule. Rule 12 applies in the district courts, except that (1)
+all time periods of thirty (30) days are reduced to fourteen (14) days for all
+actions other than an action for unlawful detainer as defined in § 6-6-310(2), Ala.
+Code 1975, and an action for eviction as defined in §35-9A-141(5), Ala. Code
+1975, in which actions a defendant shall serve an answer within seven (7)
+calendar days after service of the summons and complaint, and (2) the
+provisions for the assertion of certain defenses by motion at the option of the
+pleader in Rule 12 are deleted.

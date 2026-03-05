@@ -1,0 +1,35 @@
+Rule 19.
+Joinder of persons needed for just adjudication.
+(a) Persons to be joined if feasible. A person who is subject to jurisdiction
+of the court shall be joined as a party in the action if (1) in the person’s absence
+complete relief cannot be accorded among those already parties, or (2) the
+person claims an interest relating to the subject of the action and is so situated
+that the disposition of the action in the person’s absence may (i) as a practical
+matter impair or impede the person’s ability to protect that interest or (ii) leave
+any of the persons already parties subject to a substantial risk of incurring
+double, multiple, or otherwise inconsistent obligations by reason of the claimed
+interest. If the person has not been so joined, the court shall order that the
+person be made a party. If the person should join as a plaintiff but refuses to do
+so, the person may be made a defendant, or, in a proper case, an involuntary
+plaintiff. If the joined party objects to venue and joinder of that party would render
+the venue of the action improper, that party shall be dismissed from the action.
+(b) Determination by court whenever joinder not feasible. If a person as
+described in subdivision (a)(1)-(2) hereof cannot be made a party, the court shall
+determine whether in equity and good conscience the action should proceed
+among the parties before it, or should be dismissed, the absent person being
+thus regarded as indispensable. The factors to be considered by the court
+include: first, to what extent a judgment rendered in the person’s absence might
+be prejudicial to the person or those already parties; second, the extent to which,
+by protective provisions in the judgment, by the shaping of relief, or other
+measures, the prejudice can be lessened or avoided; third, whether a judgment
+rendered in the person’s absence will be adequate; fourth, whether the plaintiff
+will have an adequate remedy if the action is dismissed for nonjoinder.
+(c) Pleading reasons for nonjoinder. A pleading asserting a claim for relief
+shall state the names, if known to the pleader, of any persons as described in
+subdivision (a)(1)-(2) hereof who are not joined, and the reasons why they are
+not joined.
+(d) Exception of class actions. This rule is subject to the provisions of Rule
+23.
+(dc) District court rule. Rule 19 applies in the district courts except that
+Rule 19(d) has no effect in view of inapplicability of Rule 23, Class Actions, in the
+district courts.

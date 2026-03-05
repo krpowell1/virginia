@@ -1,0 +1,156 @@
+Rule 37.
+Failure to make discovery: Sanctions.
+(a) Motion for order compelling discovery. A party, upon reasonable notice
+to other parties and all persons affected thereby, may apply for an order
+compelling discovery as follows:
+(1) APPROPRIATE COURT. An application for an order to a party may be
+made to the court in which the action is pending, or, on matters relating
+to a deposition being taken within the state in a circuit other than the
+circuit in which the action is pending, to the court in the circuit where
+the deposition is being taken. An application for an order to a party on
+matters relating to a deposition being taken outside the state may also
+be made to any court having general civil jurisdiction in the place
+where the deposition is being taken. An application for an order to a
+nonparty on matters relating to a subpoena for production or inspection
+of materials within this state shall be made to the court in the circuit
+where the discovery is being sought or the court in the circuit where
+the action is pending. An application for an order to a deponent who is
+not a party and whose deposition is being taken within the state, may
+be made to the court in the circuit where the deposition is being taken
+or in which the action is pending. An application for an order to a
+deponent who is not a party on matters relating to a deposition being
+taken outside the state, shall be made to any court having general civil
+jurisdiction in the place where the deposition is being taken.
+(2) MOTION. If a deponent fails to answer a question propounded or
+submitted under Rule 30 or Rule 31, or a corporation or other entity
+fails to make a designation under Rule 30(b)(6) or 31(a), or a party fails
+to answer an interrogatory submitted under Rule 33, or if a party, in
+response to a request for production or inspection submitted under
+Rule 30(b)(5), or if a party in a response to a request for production or
+inspection submitted under Rule 34, fails to respond that production or
+inspection will be permitted as requested or fails to produce or permit
+inspection as requested, or if a person objects to or fails to comply, in
+whole or in part, with a subpoena under Rule 45(a)(3), the discovering
+party may move for an order compelling an answer, or designation, or
+an order compelling production or inspection in accordance with the
+subpoena. If a person or a party objects to the notice of a proposed
+subpoena under Rule 45(a)(3), the discovering party may move for an
+order compelling issuance of the subpoena. When taking a deposition
+on oral examination, the proponent of the question may complete or
+adjourn the examination before applying for an order.
+A motion relating to discovery issues shall be accompanied by a
+statement of the attorney for the moving party stating that the attorney,
+before filing the motion, has endeavored to resolve the subject of the
+discovery motion through correspondence or discussions with
+opposing counsel or, if the opposing party is not represented by
+counsel, with the opposing party.
+If the court denies the motion in whole or in part, it may make such
+protective order as it would have been empowered to make on a
+motion made pursuant to Rule 26(c).
+(3) EVASIVE OR INCOMPLETE ANSWER. For purposes of this subdivision an
+evasive or incomplete answer is to be treated as a failure to answer.
+(4) AWARD OF EXPENSES OF MOTION. If the motion is granted, the court shall,
+after opportunity for hearing, require the party or deponent whose
+conduct necessitated the motion or the party advising such conduct or
+both of them to pay to the moving party the reasonable expenses
+incurred in obtaining the order, including attorney fees, unless the court
+finds that the opposition to the motion was substantially justified or that
+other circumstances make an award of expenses unjust.
+If the motion is denied, the court shall, after opportunity for hearing,
+require the moving party to pay to the party or deponent who opposed
+the motion the reasonable expenses incurred in opposing the motion,
+including attorney fees, unless the court finds that the making of the
+motion was substantially justified or that other circumstances make an
+award of expenses unjust.
+If the motion is granted in part and denied in part, the court may
+apportion the reasonable expenses incurred in relation to the motion
+among the parties and persons in a just manner.
+(b) Failure to comply with order.
+(1) SANCTIONS BY A CIRCUIT JUDGE OR COURT IN PLACE WHERE DEPOSITION IS
+TAKEN OR PRODUCTION SOUGHT. If a deponent fails to be sworn or to
+answer a question after being directed to do so by a circuit judge or,
+when the deposition is being taken outside the state, by the court in the
+place in which the deposition is being taken; or, if a person, not a party,
+fails to permit production of documents or entry upon land under Rule
+45(a)(3) after being directed to do so by a circuit judge or, when
+production or entry is sought outside the state, by the court in the place
+where the documents, things, or land are located, the failure may be
+considered a contempt of court.
+(2) SANCTIONS BY COURT IN WHICH ACTION IS PENDING. If a party or an officer,
+director, or managing agent of a party or a person designated under
+Rule 30(b)(6) or 31(a) to testify on behalf of a party fails to obey an
+order to provide or permit discovery, including an order made under
+subdivision (a) of this rule or Rule 35, the court in which the action is
+pending may make such orders in regard to the failure as are just, and
+among others the following:
+(A) An order that the matters regarding which the order was made
+or any other designated facts shall be taken to be established for
+the purposes of the action in accordance with the claim of the party
+obtaining the order;
+(B) An order refusing to allow the disobedient party to support or
+oppose designated claims or defenses, or prohibiting that party
+from introducing designated matters in evidence;
+(C) An order striking out pleadings or parts thereof, or staying
+further proceedings until the order is obeyed, or dismissing the
+action or proceeding or any part thereof, or rendering a judgment
+by default against the disobedient party;
+(D) In lieu of any of the foregoing orders or in addition thereto, an
+order treating as a contempt of court the failure to obey any orders
+except an order to submit to a physical or mental examination;
+(E) Where a party has failed to comply with an order under Rule
+35(a) requiring that party to produce another for examination, such
+orders as are listed in paragraphs (A), (B), and (C) of this
+subdivision, unless the party failing to comply shows that that party
+is unable to produce such person for examination.
+In lieu of any of the foregoing orders or in addition thereto, the court shall
+require the party failing to obey the order to pay the reasonable expenses,
+including attorney fees, caused by the failure, unless the court finds that the
+failure was substantially justified or that other circumstances make an award of
+expenses unjust.
+(c) Expenses on failure to admit. If a party fails to admit the genuineness
+of any document or the truth of any matter as requested under Rule 36, and if the
+party requesting the admissions thereafter proves the genuineness of the
+document or the truth of the matter, the requesting party may apply to the court
+for an order requiring the other party to pay the reasonable expenses incurred in
+making that proof, including reasonable attorney fees. The court shall make the
+order unless it finds that (1) the request was held objectionable pursuant to Rule
+36(a), or (2) the admission sought was of no substantial importance, or (3) the
+party failing to admit had reasonable ground to believe that the party might
+prevail on the matter, or (4) there was other good reason for the failure to admit.
+(d) Failure of party to attend at own deposition or serve answers to
+interrogatories or respond to request for inspection. If a party or an officer,
+director, or managing agent of a party or a person designated under Rule
+30(b)(6) or 31(a) to testify on behalf of a party fails (1) to appear before the
+officer who is to take the deposition, after being served with a proper notice, or to
+comply with a properly served request for production under Rule 30(b)(5), without
+having made an objection thereto, or (2) to serve answers or objections to
+interrogatories submitted under Rule 33, after proper service of the
+interrogatories, or (3) to serve a written response to a request for production or
+inspection submitted under Rule 34, after proper service of the request, the court
+in which the action is pending on motion may make such orders in regard to the
+failure as are just, and among others it may take any action authorized under
+paragraphs (A), (B), and (C) of subdivision (b)(2) of this rule. In lieu of any order
+or in addition thereto, the court shall require the party failing to act to pay the
+reasonable expenses, including attorney’s fees, caused by the failure, unless the
+court finds that the failure was substantially justified or that other circumstances
+make an award of expenses unjust.
+The failure to act described in this subdivision may not be excused on the
+ground that the discovery sought is objectionable unless the party failing to act
+has applied for a protective order as provided by Rule 26(c).
+(e), (f) [Omitted.]
+(g) Failure to preserve electronically stored information. If electronically
+stored information that should have been preserved in the anticipation or conduct
+of litigation is lost because a party failed to take reasonable steps to preserve it,
+and if it cannot be restored or replaced through additional discovery, the court:
+(1) upon finding prejudice to another party from loss of the information,
+may order measures no greater than necessary to cure the
+prejudice; or
+(2) only upon finding that the party acted with the intent to deprive
+another party of use of the information in the litigation, may:
+(A) presume that the lost information was unfavorable to the party
+responsible for its loss;
+(B) instruct the jury that it may or must presume the information
+was unfavorable to the party responsible for its loss; or
+(C) dismiss the action or enter a default judgment.
+(dc) District court rule. Rule 37 applies in the district courts in those
+instances in which discovery has been permitted pursuant to Rule 26(dc).

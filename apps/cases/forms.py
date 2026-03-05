@@ -2,27 +2,27 @@ from __future__ import annotations
 
 from django import forms
 
-from .models import Case, CaseContact, Deadline, Note
+from .models import Case, CaseContact, Deadline, FeedbackRequest, Note
 
 # ---------------------------------------------------------------------------
 # Shared widget CSS classes
 # ---------------------------------------------------------------------------
 
 _INPUT = (
-    "block w-full rounded-lg border border-slate-200 bg-white px-3 py-2.5 "
-    "text-slate-800 text-base placeholder-slate-400 "
-    "focus:border-slate-400 focus:ring-1 focus:ring-slate-400 focus:outline-none "
+    "block w-full rounded-xl border border-peach-100 bg-white px-3 py-2.5 "
+    "text-peach-900 text-base placeholder-[#9B8A82] "
+    "focus:border-peach-300 focus:ring-1 focus:ring-peach-300 focus:outline-none "
     "transition-colors"
 )
 
 _SELECT = _INPUT
 
-_CHECKBOX = "h-4 w-4 rounded border-slate-300 text-slate-800 focus:ring-slate-400"
+_CHECKBOX = "h-4 w-4 rounded border-peach-100 text-peach-600 focus:ring-peach-300"
 
 _TEXTAREA = (
-    "block w-full rounded-lg border border-slate-200 bg-white px-3 py-2.5 "
-    "text-slate-800 text-base placeholder-slate-400 "
-    "focus:border-slate-400 focus:ring-1 focus:ring-slate-400 focus:outline-none "
+    "block w-full rounded-xl border border-peach-100 bg-white px-3 py-2.5 "
+    "text-peach-900 text-base placeholder-[#9B8A82] "
+    "focus:border-peach-300 focus:ring-1 focus:ring-peach-300 focus:outline-none "
     "transition-colors resize-y"
 )
 
@@ -139,6 +139,24 @@ class AddContactForm(forms.ModelForm):
 # ---------------------------------------------------------------------------
 # Deadline action forms
 # ---------------------------------------------------------------------------
+
+
+class FeedbackRequestForm(forms.ModelForm):
+    """Form for submitting a feedback request."""
+
+    class Meta:
+        model = FeedbackRequest
+        fields = ["request_type", "title", "description", "priority"]
+        widgets = {
+            "request_type": forms.Select(attrs=_attrs(_SELECT)),
+            "title": forms.TextInput(attrs=_attrs(_INPUT, placeholder="e.g., Add adjuster phone field")),
+            "description": forms.Textarea(attrs=_attrs(
+                _TEXTAREA,
+                rows="4",
+                placeholder="Describe what you need or what's not working...",
+            )),
+            "priority": forms.Select(attrs=_attrs(_SELECT)),
+        }
 
 
 class CompleteDeadlineForm(forms.Form):

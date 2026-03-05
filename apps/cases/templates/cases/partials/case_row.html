@@ -1,20 +1,20 @@
 {% load cases_tags %}
 <a href="{% url 'cases:detail' case.pk %}"
-   class="block bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-slate-300 transition-all px-5 py-4">
+   class="block bg-peach-50 rounded-xl border border-peach-100 shadow-warm hover:shadow-warm-md hover:border-peach-300 transition-all px-5 py-4">
   <div class="flex items-start justify-between gap-3">
     <div class="min-w-0 flex-1">
       <div class="flex items-center gap-2">
-        <h3 class="text-sm font-semibold text-slate-800 truncate">
+        <h3 class="text-sm font-semibold text-peach-900 truncate">
           {{ case.short_name|default:case.caption }}
         </h3>
         {% include "cases/partials/phase_badge.html" with phase=case.phase phase_display=case.get_phase_display %}
       </div>
-      <p class="text-xs text-slate-400 mt-0.5">{{ case.case_number }}</p>
+      <p class="text-xs text-[#9B8A82] mt-0.5">{{ case.case_number }}</p>
     </div>
 
     <div class="flex items-center gap-2 shrink-0">
       {% if case.overdue_count %}
-      <span class="inline-flex items-center justify-center min-w-[20px] h-5 rounded-full bg-red-500 text-white text-xs font-bold px-1.5"
+      <span class="inline-flex items-center justify-center min-w-[20px] h-5 rounded-full bg-[#DC7C7C] text-white text-xs font-bold px-1.5"
             title="{{ case.overdue_count }} overdue deadline{{ case.overdue_count|pluralize }}">
         {{ case.overdue_count }}
       </span>
@@ -23,10 +23,10 @@
       {% if case.next_deadline_date %}
       {% days_until case.next_deadline_date as days %}
       <span class="inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium
-                   {% if days <= 0 %}bg-red-50 text-red-700 border border-red-200
-                   {% elif days <= 3 %}bg-amber-50 text-amber-700 border border-amber-200
-                   {% elif days <= 7 %}bg-yellow-50 text-yellow-700 border border-yellow-200
-                   {% else %}bg-slate-100 text-slate-600{% endif %}">
+                   {% if days <= 0 %}bg-[#DC7C7C]/10 text-[#DC7C7C] border border-[#DC7C7C]/25
+                   {% elif days <= 3 %}bg-[#D4956A]/10 text-[#D4956A] border border-[#D4956A]/25
+                   {% elif days <= 7 %}bg-[#C4A94D]/10 text-[#C4A94D] border border-[#C4A94D]/25
+                   {% else %}bg-peach-50 text-peach-900/60{% endif %}">
         {% if days < 0 %}{{ case.next_deadline_date|date:"M j" }}{% elif days == 0 %}Today{% elif days == 1 %}Tomorrow{% else %}{{ case.next_deadline_date|date:"M j" }}{% endif %}
       </span>
       {% endif %}

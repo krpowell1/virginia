@@ -1,0 +1,53 @@
+Rule 55.
+Default.
+(a) Entry. When a party against whom a judgment for affirmative relief is
+sought has failed to plead or otherwise defend as provided by these rules and
+that fact is made to appear by affidavit or otherwise, the clerk shall enter the
+party’s default. The clerk’s entry of default may be made electronically.
+(b) Judgment. Judgment by default may be entered as follows:
+(1) BY THE CLERK. When the plaintiff’s claim against a defendant is for a
+sum certain or for a sum which can by computation be made certain, the clerk
+upon request of the plaintiff and upon affidavit of the amount due shall enter
+judgment for that amount and costs against the defendant, if the defendant has
+been defaulted for failure to appear and if the defendant is not a minor or
+incompetent person.
+(2) BY THE COURT. In all other cases the party entitled to a judgment by
+default shall apply to the court therefor; but no judgment by default shall be
+entered (A) against a minor or (B) against an incompetent person, unless the
+minor or the incompetent person is represented in the action by a general
+guardian or other representative as provided in Rule 17(c) who has appeared
+therein. If the party against whom judgment by default is sought has appeared in
+the action, the court shall conduct a hearing on the application for judgment, and
+the party (or, if appearing by representative, the party's representative) shall be
+served with written notice of the application for judgment and the hearing thereon
+at least three (3) days prior to the hearing on such application, provided,
+however, that judgment by default may be entered by the court on the day the
+case is set for trial without such three (3) days' notice. If, in order to enable the
+court to enter judgment or to carry it into effect, it is necessary to take an account
+or to determine the amount of damages or to establish the truth of any averment
+by evidence or to make an investigation of any other matter, the court may
+conduct such hearings or order such references as it deems necessary and
+proper and shall accord a right of trial by jury pursuant to the provisions of Rule
+38.
+(c) Setting aside default. In its discretion, the court may set aside an entry
+of default at any time before judgment. The court may on its own motion set
+aside a judgment by default within thirty (30) days after the entry of the judgment.
+The court may also set aside a judgment by default on the motion of a party filed
+not later than thirty (30) days after the entry of the judgment.
+(d) Plaintiffs, counterclaimants, cross-claimants. The provisions of this rule
+apply whether the party entitled to the judgment by default is a plaintiff, a third-
+party plaintiff, or a party who has pleaded a cross-claim or counterclaim. In all
+cases a judgment by default is subject to the limitations of Rule 54(c).
+(e) Proof required despite default in certain cases. No judgment by default
+shall be entered against minors, incompetents, or parties to an action for divorce
+or annulment of marriage unless the claimant establishes the party’s claim or
+right to relief by evidence.
+(dc) District Court Rule. Rule 55 applies in the district courts, except that
+(1) the reference to a jury in Rule 55(b)(2) is deleted; (2) the time period of thirty
+(30) days in Rule 55(c) is reduced to fourteen (14) days in all cases except for
+unlawful-detainer actions subject to appeal under §6-6-350, Ala. Code 1975, and
+actions for eviction as defined in §35-9A-141(5), Ala. Code 1975, in which
+actions the thirty-(30-)day time period is reduced to seven (7) calendar days; (3)
+the provisions dealing with an action for divorce or annulment of marriage at Rule
+55(e) are deleted; and (4) a party shall not be deemed in default if the party has
+served an appearance in the form of a motion to dismiss.

@@ -12,7 +12,10 @@ from .models import (
     CalendarToken,
     Case,
     CaseContact,
+    ChangelogEntry,
     Deadline,
+    FeedbackRequest,
+    FeedbackStatus,
     Note,
 )
 
@@ -333,6 +336,44 @@ admin.site.register(Note)
 # ---------------------------------------------------------------------------
 # CalendarTokenAdmin
 # ---------------------------------------------------------------------------
+
+
+@admin.register(ChangelogEntry)
+class ChangelogEntryAdmin(admin.ModelAdmin):
+    """Admin for changelog entries — Kasey adds these when pushing updates."""
+
+    list_display = ("version", "title", "is_published", "created_at")
+    list_filter = ("is_published",)
+    search_fields = ("title", "description")
+    ordering = ("-created_at",)
+
+
+@admin.register(FeedbackRequest)
+class FeedbackRequestAdmin(admin.ModelAdmin):
+    """Admin for reviewing and responding to Virginia's feedback requests."""
+
+    list_display = ("title", "user", "request_type", "priority", "status", "created_at")
+    list_filter = ("status", "request_type", "priority")
+    list_editable = ("status",)
+    search_fields = ("title", "description")
+    readonly_fields = ("user", "request_type", "title", "description", "priority", "created_at")
+    ordering = ("-created_at",)
+
+    fieldsets = (
+        ("Request (from Virginia)", {
+            "fields": ("user", "request_type", "title", "description", "priority", "created_at"),
+        }),
+        ("Response (from Kasey)", {
+            "fields": ("status", "admin_notes", "resolved_at"),
+        }),
+    )
+
+    def save_model(self, request: HttpRequest, obj: FeedbackRequest, form: object, change: bool) -> None:
+        """Auto-set resolved_at when status changes to DONE."""
+        if obj.status == FeedbackStatus.DONE and not obj.resolved_at:
+            from django.utils import timezone
+            obj.resolved_at = timezone.now()
+        super().save_model(request, obj, form, change)
 
 
 @admin.register(CalendarToken)

@@ -5,7 +5,32 @@
 {% block content %}
 <div class="max-w-3xl mx-auto px-4 py-6 space-y-6">
 
-  <h1 class="text-2xl font-semibold text-slate-800 tracking-tight">Dashboard</h1>
+  <h1 class="text-2xl font-semibold text-peach-900 tracking-tight">Dashboard</h1>
+
+  <!-- ============================================================= -->
+  <!-- What's New banner                                              -->
+  <!-- ============================================================= -->
+  {% if has_updates and latest_entry %}
+  <div id="whats-new-banner"
+       class="bg-peach-200/60 rounded-xl border border-peach-300/50 shadow-warm px-5 py-3.5 flex items-center justify-between gap-3">
+    <a href="{% url 'cases:changelog' %}" class="flex items-center gap-2.5 min-w-0 group">
+      <span class="text-base shrink-0">&#127872;</span>
+      <div class="min-w-0">
+        <span class="text-sm font-medium text-peach-900 group-hover:underline">What's New</span>
+        <span class="text-sm text-peach-900/70"> &mdash; {{ latest_entry.title }}</span>
+      </div>
+    </a>
+    <button hx-post="{% url 'cases:changelog-dismiss' %}"
+            hx-target="#whats-new-banner"
+            hx-swap="outerHTML"
+            class="shrink-0 p-1.5 rounded-lg text-peach-900/40 hover:text-peach-900/70 hover:bg-peach-300/30 transition-colors"
+            aria-label="Dismiss">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+  </div>
+  {% endif %}
 
   <!-- ============================================================= -->
   <!-- RFA Auto-Admission Risk                                        -->
@@ -13,13 +38,13 @@
   {% if rfa_risk_deadlines %}
   <section>
     <div class="flex items-center gap-2 mb-3">
-      <h2 class="text-xs font-bold uppercase tracking-wider text-red-700">Auto-Admission Risk</h2>
-      <span class="inline-flex items-center justify-center min-w-[20px] h-5 rounded-full bg-red-700 text-white text-xs font-bold px-1.5">
+      <h2 class="text-xs font-bold uppercase tracking-wider text-[#DC7C7C]">Auto-Admission Risk</h2>
+      <span class="inline-flex items-center justify-center min-w-[20px] h-5 rounded-full bg-[#DC7C7C] text-white text-xs font-bold px-1.5">
         {{ rfa_risk_deadlines|length }}
       </span>
     </div>
 
-    <div class="bg-red-50 rounded-xl border-2 border-red-300 shadow-sm overflow-hidden">
+    <div class="bg-red-50 rounded-xl border-2 border-red-300 shadow-warm overflow-hidden">
       {% for deadline in rfa_risk_deadlines %}
       {% if deadline.is_overdue %}
       <div class="bg-red-100 border-b border-red-200 px-5 py-2">
@@ -65,23 +90,23 @@
   <!-- ============================================================= -->
   <section>
     <div class="flex items-center gap-2 mb-3">
-      <h2 class="text-xs font-semibold uppercase tracking-wider text-red-500">Overdue</h2>
+      <h2 class="text-xs font-semibold uppercase tracking-wider text-[#DC7C7C]">Overdue</h2>
       {% if overdue_deadlines %}
-      <span class="inline-flex items-center justify-center min-w-[20px] h-5 rounded-full bg-red-500 text-white text-xs font-bold px-1.5">
+      <span class="inline-flex items-center justify-center min-w-[20px] h-5 rounded-full bg-[#DC7C7C] text-white text-xs font-bold px-1.5">
         {{ overdue_deadlines|length }}
       </span>
       {% endif %}
     </div>
 
     {% if overdue_deadlines %}
-    <div class="bg-white rounded-xl border border-slate-200 shadow-sm divide-y divide-slate-100">
+    <div class="bg-peach-50 rounded-xl border border-peach-100 shadow-warm divide-y divide-peach-100">
       {% for deadline in overdue_deadlines %}
       {% include "cases/partials/deadline_row.html" with show_case=True accent="red" %}
       {% endfor %}
     </div>
     {% else %}
-    <div class="bg-white rounded-xl border border-slate-200 shadow-sm px-5 py-8 text-center">
-      <p class="text-sm text-slate-400">All clear &mdash; nothing overdue</p>
+    <div class="bg-peach-50 rounded-xl border border-peach-100 shadow-warm px-5 py-8 text-center">
+      <p class="text-base text-[#9B8A82]">All clear &mdash; nothing overdue</p>
     </div>
     {% endif %}
   </section>
@@ -91,23 +116,23 @@
   <!-- ============================================================= -->
   <section>
     <div class="flex items-center gap-2 mb-3">
-      <h2 class="text-xs font-semibold uppercase tracking-wider text-amber-500">Due Today</h2>
+      <h2 class="text-xs font-semibold uppercase tracking-wider text-[#D4956A]">Due Today</h2>
       {% if today_deadlines %}
-      <span class="inline-flex items-center justify-center min-w-[20px] h-5 rounded-full bg-amber-500 text-white text-xs font-bold px-1.5">
+      <span class="inline-flex items-center justify-center min-w-[20px] h-5 rounded-full bg-[#D4956A] text-white text-xs font-bold px-1.5">
         {{ today_deadlines|length }}
       </span>
       {% endif %}
     </div>
 
     {% if today_deadlines %}
-    <div class="bg-white rounded-xl border border-slate-200 shadow-sm divide-y divide-slate-100">
+    <div class="bg-peach-50 rounded-xl border border-peach-100 shadow-warm divide-y divide-peach-100">
       {% for deadline in today_deadlines %}
       {% include "cases/partials/deadline_row.html" with show_case=True accent="amber" %}
       {% endfor %}
     </div>
     {% else %}
-    <div class="bg-white rounded-xl border border-slate-200 shadow-sm px-5 py-8 text-center">
-      <p class="text-sm text-slate-400">Nothing due today</p>
+    <div class="bg-peach-50 rounded-xl border border-peach-100 shadow-warm px-5 py-8 text-center">
+      <p class="text-base text-[#9B8A82]">Nothing due today</p>
     </div>
     {% endif %}
   </section>
@@ -117,23 +142,23 @@
   <!-- ============================================================= -->
   <section>
     <div class="flex items-center gap-2 mb-3">
-      <h2 class="text-xs font-semibold uppercase tracking-wider text-yellow-500">This Week</h2>
+      <h2 class="text-xs font-semibold uppercase tracking-wider text-[#C4A94D]">This Week</h2>
       {% if this_week_deadlines %}
-      <span class="inline-flex items-center justify-center min-w-[20px] h-5 rounded-full bg-yellow-500 text-white text-xs font-bold px-1.5">
+      <span class="inline-flex items-center justify-center min-w-[20px] h-5 rounded-full bg-[#C4A94D] text-white text-xs font-bold px-1.5">
         {{ this_week_deadlines|length }}
       </span>
       {% endif %}
     </div>
 
     {% if this_week_deadlines %}
-    <div class="bg-white rounded-xl border border-slate-200 shadow-sm divide-y divide-slate-100">
+    <div class="bg-peach-50 rounded-xl border border-peach-100 shadow-warm divide-y divide-peach-100">
       {% for deadline in this_week_deadlines %}
       {% include "cases/partials/deadline_row.html" with show_case=True accent="yellow" %}
       {% endfor %}
     </div>
     {% else %}
-    <div class="bg-white rounded-xl border border-slate-200 shadow-sm px-5 py-8 text-center">
-      <p class="text-sm text-slate-400">Clear week ahead</p>
+    <div class="bg-peach-50 rounded-xl border border-peach-100 shadow-warm px-5 py-8 text-center">
+      <p class="text-base text-[#9B8A82]">Clear week ahead</p>
     </div>
     {% endif %}
   </section>
@@ -143,10 +168,10 @@
   <!-- ============================================================= -->
   <section>
     <div class="flex items-center gap-2 mb-3">
-      <h2 class="text-xs font-semibold uppercase tracking-wider text-blue-500">Needs Attention</h2>
+      <h2 class="text-xs font-semibold uppercase tracking-wider text-[#7C9CB8]">Needs Attention</h2>
       {% with total=missing_defenses|length|add:pending_approval|length %}
       {% if total %}
-      <span class="inline-flex items-center justify-center min-w-[20px] h-5 rounded-full bg-blue-500 text-white text-xs font-bold px-1.5">
+      <span class="inline-flex items-center justify-center min-w-[20px] h-5 rounded-full bg-[#7C9CB8] text-white text-xs font-bold px-1.5">
         {{ total }}
       </span>
       {% endif %}
@@ -154,13 +179,13 @@
     </div>
 
     {% if missing_defenses or pending_approval %}
-    <div class="bg-white rounded-xl border border-slate-200 shadow-sm divide-y divide-slate-100">
+    <div class="bg-peach-50 rounded-xl border border-peach-100 shadow-warm divide-y divide-peach-100">
 
       {% for case in missing_defenses %}
-      <a href="{% url 'cases:detail' case.pk %}" class="flex items-center justify-between px-5 py-3.5 hover:bg-slate-50 transition-colors">
+      <a href="{% url 'cases:detail' case.pk %}" class="flex items-center justify-between px-5 py-3.5 hover:bg-white/80 transition-colors">
         <div class="min-w-0">
-          <span class="text-sm font-medium text-slate-800">{{ case.short_name|default:case.caption }}</span>
-          <span class="ml-2 text-xs text-slate-400">{{ case.case_number }}</span>
+          <span class="text-sm font-medium text-peach-900">{{ case.short_name|default:case.caption }}</span>
+          <span class="ml-2 text-xs text-[#9B8A82]">{{ case.case_number }}</span>
         </div>
         <span class="shrink-0 inline-flex items-center rounded-full bg-red-50 border border-red-200 px-2.5 py-0.5 text-xs font-medium text-red-700">
           Contrib. neg. not pled
@@ -169,10 +194,10 @@
       {% endfor %}
 
       {% for case in pending_approval %}
-      <a href="{% url 'cases:detail' case.pk %}" class="flex items-center justify-between px-5 py-3.5 hover:bg-slate-50 transition-colors">
+      <a href="{% url 'cases:detail' case.pk %}" class="flex items-center justify-between px-5 py-3.5 hover:bg-white/80 transition-colors">
         <div class="min-w-0">
-          <span class="text-sm font-medium text-slate-800">{{ case.short_name|default:case.caption }}</span>
-          <span class="ml-2 text-xs text-slate-400">{{ case.case_number }}</span>
+          <span class="text-sm font-medium text-peach-900">{{ case.short_name|default:case.caption }}</span>
+          <span class="ml-2 text-xs text-[#9B8A82]">{{ case.case_number }}</span>
         </div>
         <span class="shrink-0 inline-flex items-center rounded-full bg-amber-50 border border-amber-200 px-2.5 py-0.5 text-xs font-medium text-amber-700">
           Awaiting approval
@@ -182,8 +207,8 @@
 
     </div>
     {% else %}
-    <div class="bg-white rounded-xl border border-slate-200 shadow-sm px-5 py-8 text-center">
-      <p class="text-sm text-slate-400">All cases up to date</p>
+    <div class="bg-peach-50 rounded-xl border border-peach-100 shadow-warm px-5 py-8 text-center">
+      <p class="text-base text-[#9B8A82]">All cases up to date</p>
     </div>
     {% endif %}
   </section>

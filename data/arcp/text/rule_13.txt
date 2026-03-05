@@ -1,0 +1,75 @@
+Rule 13.
+Counterclaim and cross-claim.
+(a) Compulsory counterclaims. A pleading shall state as a counterclaim
+any claim which at the time of serving the pleading the pleader has against any
+opposing party, if it arises out of the transaction or occurrence that is the subject
+matter of the opposing party’s claim and does not require for its adjudication the
+presence of third parties of whom the court cannot acquire jurisdiction. But the
+pleader need not state the claim if: (1) at the time the action was commenced the
+claim was the subject of another pending action; or (2) the opposing party
+brought suit upon his claim by attachment or other process by which the court did
+not acquire jurisdiction to render a personal judgment on that claim, and the
+pleader is not stating any counterclaim under this Rule 13; or (3) the opposing
+party’s claim is for damage covered by a liability insurance policy under which the
+insurer has the right or the obligation to conduct the defense. In the event an
+otherwise compulsory counterclaim is not asserted in reliance upon any
+exception stated in paragraph (a), relitigation of the claim may be barred by the
+doctrines of res judicata or collateral estoppel by judgment in the event certain
+issues are determined adversely to the party electing not to assert the claim.
+(b) Permissive counterclaims. A pleading may state as a counterclaim any
+claim against an opposing party not arising out of the transaction or occurrence
+that is the subject matter of the opposing party’s claim.
+(c) Counterclaim exceeding opposing claim. A counterclaim may or may
+not diminish or defeat the recovery sought by the opposing party. It may claim
+relief exceeding in amount or different in kind from that sought in the pleading of
+the opposing party. All counterclaims other than those maturing or acquired after
+pleading shall relate back to the time the original plaintiff’s claim arose.
+(d) Counterclaim against the State of Alabama. These rules shall not be
+construed to enlarge beyond the limits now fixed by law the right to assert
+counterclaims or to claim credits against the State of Alabama or an officer or
+agency thereof.
+(e) Counterclaim maturing or acquired after pleading. A claim which either
+matured or was acquired by the pleader after serving a pleading may, with the
+permission of the court, be presented as a counterclaim by supplemental
+pleading.
+(f) Omitted counterclaim. When a pleader fails to set up a counterclaim
+through oversight, inadvertence, or excusable neglect, or when justice requires,
+the pleader may by leave of court set up the counterclaim by amendment.
+(g) Cross-claim against co-party. A pleading may state as a cross-claim
+any claim by one party against a co-party arising out of the transaction or
+occurrence that is the subject matter either of the original action or of a
+counterclaim therein or relating to any property that is the subject matter of the
+original action. Such cross-claim may include a claim that the party against whom
+it is asserted is or may be liable to the cross-claimant for all or part of a claim
+asserted in the action against the cross-claimant.
+(h) Joinder of additional parties. Persons other than those made parties to
+the original action may be made parties to a counterclaim or cross-claim in
+accordance with the provisions of Rules 19 and 20.
+(i) Separate trials; separate judgments. If the court orders separate trials
+as provided in Rule 42(b), judgment on a counterclaim or cross-claim may be
+rendered in accordance with the terms of Rule 54(b) when the court has
+jurisdiction so to do, even if the claims of the opposing party have been
+dismissed or otherwise disposed of.
+(j) Appealed actions. Where an action is commenced in a court from which
+an appeal lies to the circuit court for a trial de novo any counterclaim made
+compulsory by subdivision (a) of this rule shall be stated as an amendment to the
+pleading within thirty (30) days after the appeal has been perfected to the circuit
+court or within such further time as the court may allow; and other counterclaims
+and cross-claims shall be permitted as in an original action. When a counterclaim
+or cross-claim is asserted by a defendant in an appealed case, the defendant
+shall not be limited in amount to the jurisdiction of the lower court but shall be
+permitted to claim and recover the full amount of its claim irrespective of the
+jurisdiction of the lower court. If the plaintiff appeals a case to the circuit court
+from a lower court and obtains a trial de novo in the circuit court, the plaintiff shall
+be limited in the amount of his recovery to the jurisdictional amount that could
+have been claimed and recovered in the lower court, unless the defendant
+asserts a counterclaim in excess of the jurisdictional amount of the lower court. If
+a defendant appeals to the circuit court from a judgment rendered by a lower
+court, the plaintiff in the circuit court on a trial de novo shall be permitted to claim
+and recover the full amount of its claim even though the amount might exceed
+the jurisdiction of the lower court. For purposes of this Rule 13(j), the word
+“appeal” includes petition for writ of certiorari.
+(dc) District court rule. Rule 13 applies in the district court except that, (1)
+Rule 13(a) is modified so as to excuse the pleader from asserting a compulsory
+counterclaim when the claim is beyond the jurisdiction of the district courts and,
+(2) Rule 13(j), Appealed Actions, is deleted.

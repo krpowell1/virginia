@@ -568,6 +568,149 @@ def _generate_calendar_token() -> str:
     return secrets.token_urlsafe(48)
 
 
+class ChangelogEntry(models.Model):
+    """A user-facing changelog entry describing what changed in a release.
+
+    Written in plain language for Virginia, not developer jargon.
+    Entries are displayed newest-first on the "What's New" page and
+    trigger a dashboard banner when unread.
+    """
+
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    version = models.CharField(
+        max_length=20,
+        unique=True,
+        help_text="Semantic version string, e.g. '1.1.0'.",
+    )
+    title = models.CharField(
+        max_length=200,
+        help_text="Short headline, e.g. 'Peach Pink Theme'.",
+    )
+    description = models.TextField(
+        help_text="Plain-language summary written for Virginia, not dev notes.",
+    )
+    is_published = models.BooleanField(
+        default=True,
+        help_text="Unpublished entries are hidden from the changelog page.",
+    )
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ["-created_at"]
+        verbose_name_plural = "changelog entries"
+
+    def __str__(self) -> str:
+        return f"v{self.version} — {self.title}"
+
+
+class UserChangelogRead(models.Model):
+    """Tracks the last changelog version a user has seen.
+
+    Used to determine whether to show the 'What's New' banner on the dashboard.
+    """
+
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    user = models.OneToOneField(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        related_name="changelog_read",
+    )
+    last_read_version = models.CharField(
+        max_length=20,
+        help_text="The version string the user last dismissed.",
+    )
+    last_read_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name = "user changelog read"
+        verbose_name_plural = "user changelog reads"
+
+    def __str__(self) -> str:
+        return f"{self.user} read through v{self.last_read_version}"
+
+
+class FeedbackType(models.TextChoices):
+    """Type of feedback request."""
+
+    FEATURE = "FEATURE", "Feature Request"
+    BUG = "BUG", "Bug Report"
+    CHANGE = "CHANGE", "Change Request"
+    OTHER = "OTHER", "Other"
+
+
+class FeedbackPriority(models.TextChoices):
+    """Priority level for a feedback request."""
+
+    LOW = "LOW", "Low"
+    MEDIUM = "MEDIUM", "Medium"
+    HIGH = "HIGH", "High"
+
+
+class FeedbackStatus(models.TextChoices):
+    """Status of a feedback request."""
+
+    NEW = "NEW", "New"
+    REVIEWED = "REVIEWED", "Reviewed"
+    IN_PROGRESS = "IN_PROGRESS", "In Progress"
+    DONE = "DONE", "Done"
+    WONT_DO = "WONT_DO", "Won't Do"
+
+
+class FeedbackRequest(models.Model):
+    """A feedback request from Virginia to Kasey.
+
+    Casual, lightweight way for Virginia to request features, report bugs,
+    or suggest changes. Kasey reviews and responds via Django admin.
+    """
+
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    user = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        related_name="feedback_requests",
+    )
+    request_type = models.CharField(
+        max_length=10,
+        choices=FeedbackType.choices,
+        default=FeedbackType.FEATURE,
+        help_text="What kind of request this is.",
+    )
+    title = models.CharField(
+        max_length=200,
+        help_text="Short summary of the request.",
+    )
+    description = models.TextField(
+        help_text="The details in her own words.",
+    )
+    priority = models.CharField(
+        max_length=10,
+        choices=FeedbackPriority.choices,
+        default=FeedbackPriority.MEDIUM,
+    )
+    status = models.CharField(
+        max_length=15,
+        choices=FeedbackStatus.choices,
+        default=FeedbackStatus.NEW,
+    )
+    admin_notes = models.TextField(
+        blank=True,
+        help_text="Kasey's notes on what he did or why he won't do it.",
+    )
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    resolved_at = models.DateTimeField(
+        null=True,
+        blank=True,
+        help_text="When this request was marked done.",
+    )
+
+    class Meta:
+        ordering = ["-created_at"]
+
+    def __str__(self) -> str:
+        return f"[{self.get_request_type_display()}] {self.title}"
+
+
 class CalendarToken(models.Model):
     """Token for authenticating webcal feed subscriptions.
 

@@ -1,0 +1,335 @@
+Rule 4.
+Process: General and miscellaneous provisions.
+(a) Summons or other process.
+(1) Issuance. Upon the filing of the complaint, or other document required
+to be served in the manner of an original complaint, the clerk shall forthwith issue
+the required summons or other process for service upon each defendant. Upon
+request of the plaintiff separate or additional summons shall issue at any time
+against any defendant.
+(2) FORM. The summons or other process, or each of them in cases
+involving multiple defendants, shall be signed by the clerk, contain the name of
+the court and the name of the first party on each side with an appropriate
+indication of other parties in cases involving multiple parties, be directed to the
+defendant or each defendant in cases involving multiple defendants, state the
+name and address of the plaintiff's attorney, if any, otherwise the plaintiff's
+address, and the time within which these rules require the defendant to appear
+and defend, and shall notify the defendant that, in case of the defendant's failure
+to do so, judgment by default may be rendered against the defendant for the
+relief demanded in the complaint.
+(3) COPY OF COMPLAINT OR OTHER DOCUMENT. A copy of the complaint,
+showing the case number assigned to the action, or other document to be
+served shall accompany each summons or other process. The plaintiff shall
+furnish the clerk with sufficient copies of the complaint or other document to be
+served. Copies are not required if the complaint or other document is filed
+electronically.
+(4) PLAINTIFF AND DEFENDANT DEFINED. For the purpose of issuance and service of
+summons or other process, "plaintiff" shall include any party seeking the
+issuance of service of summons, and "defendant" shall include any party
+upon whom service of summons or other process is sought.
+(5) INSTRUCTIONS AND FORM. The plaintiff shall furnish the clerk with instructions
+for service of the complaint or other document and, when requested by the
+clerk, the plaintiff shall also furnish sufficient properly completed copies of
+the summons or other process. When the plaintiff has requested the clerk
+to issue service by certified mail, the plaintiff, at the request of the clerk,
+shall also furnish properly completed postal forms necessary for such
+service.
+(b) Time limit for service. If service of the summons and complaint is not
+made upon a defendant within 120 days after the filing of the complaint, the
+court, upon motion or on its own initiative, after at least fourteen (14) days' notice
+to the plaintiff, may dismiss the action without prejudice as to the defendant upon
+whom service was not made or direct that service be effected within a specified
+time; provided, however, that if the plaintiff shows good cause for the failure to
+serve the defendant, the court shall extend the time for service for an appropriate
+period. This subdivision does not apply to fictitious-party practice pursuant to
+(c) Upon whom process served. Service of process, except service by
+publication as provided in Rule 4.3, shall be made as follows:
+(1) INDIVIDUAL. Upon an individual, other than a minor or an incompetent
+person, by serving the individual or by leaving a copy of the summons and the
+complaint at the individual's dwelling house or usual place of abode with some
+person of suitable age and discretion then residing therein or by delivering a copy
+of the summons and the complaint to an agent authorized by appointment or by
+law to receive service of process;
+(2) MINOR. Upon a minor by serving any one of the following: the father,
+the mother, the guardian, the individual having care of the minor or with whom
+the minor lives, or the spouse, if the minor is married, and, if the minor is over the
+age of sixteen (16) years, by also serving the minor personally;
+(3) INCOMPETENT NOT CONFINED. Upon an incompetent person not confined
+by serving the incompetent and that person's guardian but, if no guardian has
+been appointed, by serving the incompetent and a person with whom the
+incompetent lives or a person who cares for the incompetent;
+(4) INCOMPETENT CONFINED. Upon an incompetent person not having a
+guardian and confined in any institution for the mentally ill or mentally deficient,
+by serving the superintendent of the institution or similar official or person having
+the responsibility for custody of the incompetent person;
+(5) INCARCERATED PERSON. Upon an individual incarcerated in any penal
+institution or detention facility within this state, by serving the individual, except
+that when the individual to be served is a minor, by serving any one of the
+following: the father, the mother, the guardian, the individual having care of the
+minor, or the spouse, if the minor is married, and, if the minor is over the age of
+sixteen (16) years, by also serving the minor
+(6) CORPORATIONS AND OTHER ENTITIES. Upon a domestic or foreign
+corporation or upon a partnership, limited partnership, limited liability partnership,
+limited liability company, or unincorporated organization or association, by
+serving an officer, a partner (other than a limited partner), a managing or general
+agent, or any agent authorized by appointment or by law to receive service of
+process.
+(7) STATE. Upon this state or any one of its departments, agencies, offices,
+or institutions, by serving the officer responsible for the administration of the
+department, agency, office, or institution, and by serving the attorney general of
+this state;
+(8) LOCAL GOVERNMENTS AND OTHER GOVERNMENTAL ENTITIES. Upon a
+county, municipal corporation, or any other governmental entity not previously
+mentioned, or an agency thereof, by serving the chief executive officer or the
+clerk, or other person designated by appointment or by statute to receive service
+of process, or upon the attorney general of the state if such service is
+accompanied by an affidavit of a party or the party's attorney that all such
+persons described herein are unknown or cannot be located.
+(d) Amendment. The court, within its discretion and upon such terms as
+are just, may at any time allow or approve the amendment of any process or
+proof of service thereof, unless the amendment would cause material prejudice
+to the substantial rights of the party against whom the process was issued.
+(e) Service refused. If service of process is refused, and the certified mail
+receipt or the return of the person serving process states that service of process
+has been refused, the clerk shall send by ordinary mail a copy of the summons or
+other process and complaint or other document to be served to the defendant at
+the address set forth in the complaint or other document to be served. Service
+shall be deemed complete when the fact of mailing is entered of record.
+(f) Multiple defendants; incomplete service; dismissal of fictitiously named
+defendants. When there are multiple defendants and the summons (or other
+document to be served) and the complaint have been served on one or more, but
+not all, of the defendants, the plaintiff may proceed to judgment as to the
+defendant or defendants on whom process has been served and, if the judgment
+as to the defendant or defendants who have been served is final in all other
+respects, it shall be a final judgment. After the entry of judgment, if the plaintiff is
+able to obtain service on a defendant or defendants not previously served
+(except, however, defendants designated as fictitious parties as allowed by Rule
+9(h), who shall be deemed to have been dismissed voluntarily when the case
+was announced ready for trial against other defendants sued by their true
+names), the court shall hear and determine the matter as to such defendant or
+defendants in the same manner as if such defendant or defendants had originally
+been brought into court, but such defendant or defendants shall be allowed the
+benefit of any payment or satisfaction that may have been made on the judgment
+previously entered in the action.
+(g) Effect of availability of alternative or dual modes of service of process.
+There shall be no objection to the service of process or notice to litigants, that
+two or more modes of service of notice are provided by law or under these rules,
+but service of notice perfected in any one manner or mode that is provided for by
+law or under these rules shall be deemed sufficient, notwithstanding that other
+modes or manner of service and notice are provided by law or under these rules.
+(h) Acceptance or waiver of service. A defendant may accept or waive
+service of process by a document signed by the defendant and filed with the
+clerk of court from which the process issued.
+(i) Methods of service. Service under this rule shall include the following:
+(1) DELIVERY BY A PROCESS SERVER.
+(A) By Sheriff or Constable. When process issued from any court
+subject to the provisions of these rules is to be delivered personally within
+this state, the clerk of the court shall deliver or mail the process and
+sufficient copies of the process and complaint, or other documents to be
+served, to the sheriff or constable of the county in which the party to be
+served resides or may be found.
+(B) By Designated Person. As an alternative to delivery by the
+sheriff, or when process is to be delivered personally outside this state,
+process issuing from any court governed by these rules may be served by
+any person not less than nineteen (19) years of age, who is not a party
+and is not related within the third degree by blood or marriage to the party
+seeking service of process.
+(C) How Served and Returned. The person serving process shall
+deliver a copy of the process and accompanying documents to the
+defendant or other person who may be served under the provisions of
+Rule 4(c). When the copy of the process has been delivered, the person
+serving process shall endorse that fact on the return copy of the process,
+stating the date of service and the first and last name of the person
+served. If the service is substituted service on a person other than the
+defendant, the return shall also include sufficient information to show the
+person served qualifies as a person to be served for the defendant under
+Rule 4(c). The return shall be signed by the server and filed with the clerk
+of the issuing court, who shall make the appropriate entry on the docket
+sheet and electronic record relating to the action.
+If the service is made by a sheriff, deputy sheriff, or elected
+constable, the return shall clearly indicate the name, official title, and
+badge number or precinct number of the serving officer or constable. If the
+service is made by a Designated Person under Rule 4(i)(1)(B), the return
+shall clearly indicate the name, the physical address of the home or
+business, and the telephone number of the person serving process and
+must include a statement that the server meets the requirements of Rule
+4(i)(1)(B). The return of the person serving process in the manner
+described herein shall be prima facie evidence that process has been
+served.
+(D) Failure of Service. When the person serving process is unable
+to serve a copy of the process within sixty (60) days from issuance of the
+process by the clerk of court, the person serving process shall endorse
+that fact and the reason therefor on the process and return the process
+and copies to the clerk, who shall make the appropriate entry on the
+docket sheet and the electronic record relating to the action. Failure to
+make service within the sixty- (60-) day period and failure to make proof of
+service do not affect the validity of service perfected beyond that period.
+(2) SERVICE BY CERTIFIED MAIL.
+(A) When Proper. When the plaintiff files a written request with the
+clerk for service by certified mail, service of process shall be made by that
+method. Alternatively, the attorney or party filing the process and
+complaint may initiate service by certified mail as provided in this rule.
+(B) How Served. (i) In the event of service by certified mail by the
+clerk, the clerk shall place a copy of the process and complaint or other
+document to be served in an envelope and shall address the envelope to
+the person to be served with instructions to forward. In the case of an
+entity within the scope of one of the subdivisions of Rule 4(c), the
+addressee shall be a person described in the appropriate subdivision. The
+clerk shall affix adequate postage and place the sealed envelope in the
+United States mail as certified mail with instructions to forward, return
+receipt requested, with instructions to the delivering postal employee to
+show to whom delivered, date of delivery, and address where delivered.
+The case number of the case in which the pleading has been filed shall be
+included on the return receipt. The clerk shall forthwith enter the fact of
+mailing on the docket sheet of the action and make a similar entry when
+the return receipt is received.
+(ii) Alternatively, the attorney or party filing the process
+and complaint or other document to be served may obtain a
+copy of the filed pleading from the clerk or, if the pleading was
+filed electronically, use the copy returned electronically by the
+clerk. The attorney or party shall then place that copy of the
+process and complaint or other document to be served in an
+envelope and address the envelope to the person to be served
+with instructions to forward. In the case of an entity within the
+scope of one of the subdivisions of Rule 4(c), the addressee
+shall be a person described in the appropriate subdivision. The
+attorney or party shall affix adequate postage and place the
+sealed envelope in the United States mail as certified mail with
+instructions to forward, return receipt requested, with
+instructions to the delivering postal employee to show to whom
+delivered, date of delivery, and address where delivered. The
+return receipt shall be addressed to the clerk of the court issuing
+the process and shall identify the case number of the case in
+which the pleading has been filed. Upon mailing, the attorney or
+party shall immediately file with the court an "Affidavit of
+Certified Mailing of Process and Complaint." That affidavit shall
+verify that a filed copy of the process and complaint or other
+document to be served has been mailed by certified mail in
+accordance with this rule.
+(C) When Effective. Service by certified mail shall be deemed
+complete and the time for answering shall run from the date of delivery to
+the named addressee or the addressee's agent as evidenced by signature
+on the return receipt. Within the meaning of this subdivision, "agent"
+means a person or entity specifically authorized by the addressee to
+receive the addressee's mail and to deliver that mail to the addressee.
+Such agent's authority shall be conclusively established when the
+addressee acknowledges actual receipt of the summons and complaint or
+the court determines that the evidence proves the addressee did actually
+receive the summons and complaint in time to avoid a default. An action
+shall not be dismissed for improper service of process unless the service
+failed to inform the defendant of the action within time to avoid a default. In
+the case of an entity included in one of the provisions of Rule 4(c),
+"defendant," within the meaning of this subdivision, shall be such a person
+described in the applicable subdivision of 4(c).
+(D) Failure of Delivery. Failure to make service within sixty (60)
+days from issuance of the process by the clerk of the court and failure to
+make proof of service do not affect the validity of service perfected beyond
+that period.
+Rule 4(i)(3), Alabama Rules of Civil Procedure
+(3) Service by Commercial Carrier.
+(A) When Proper.
+(i) When the plaintiff files a written request
+with the clerk for service by commercial carrier,
+service of process shall be made by that method. For
+purposes of this subdivision, "commercial carrier"
+means only those commercial carriers approved by
+the Administrative Director of Courts, pursuant to Rule
+45 of the Alabama Rules of Judicial Administration.
+When service by commercial carrier is initiated by the
+clerk, the clerk's choice of commercial carrier is
+limited to those approved by the Administrative
+Director of Courts.
+(ii) Alternatively, the attorney or party filing
+the process and complaint may initiate service by
+commercial carrier as provided in this rule. For
+purposes of this subdivision, "commercial carrier"
+means any foreign or domestic business entity that is
+not a party to the civil action; that has as its primary
+purpose the delivery of letters and parcels of any
+type; and that will deliver to the sender a written or
+electronic receipt showing to whom the process and
+complaint were delivered, the written or electronic
+signature of the recipient, the date of delivery, the
+address where delivered, and the person or entity
+effecting delivery.
+(B) How Served.
+(i) In the event of service by commercial carrier
+initiated by the clerk, the clerk shall deliver to the
+commercial carrier a copy of the process and
+complaint or other document to be served in an
+envelope and shall address the envelope to the
+person to be served. In the case of an entity within the
+scope of one of the subdivisions of Rule 4(c), the
+addressee shall be a person described in the
+appropriate subdivision. The clerk shall provide to the
+commercial carrier payment of the required shipping
+costs, with instructions to the commercial carrier to
+provide to the clerk a written or electronic receipt
+showing to whom the process and complaint or other
+document to be served was delivered, the written or
+electronic signature of the recipient, the date of
+delivery, the address where delivered, and the person
+or entity effecting delivery. The clerk shall forthwith
+enter the fact of delivery to the commercial carrier on
+the docket sheet of the action and make a similar
+entry when a delivery receipt is received.
+(ii) Alternatively, the attorney or party filing
+the process and complaint or other document to be
+served may obtain a copy of the filed pleading from
+the clerk or, if the pleading was filed electronically,
+use the copy returned electronically by the clerk. The
+attorney or party shall then deliver to the commercial
+carrier that copy of the process and complaint or other
+document to be served in an envelope and shall
+address the envelope to the person to be served. In
+the case of an entity within the scope of one of the
+subdivisions of Rule 4(c), the addressee shall be a
+person described in the appropriate subdivision. The
+attorney or party shall provide to the commercial
+carrier payment of the required shipping costs, with
+instructions to the commercial carrier to provide to the
+attorney or party a written or electronic receipt
+showing to whom the process and complaint or other
+document to be served was delivered, the written or
+electronic signature of the recipient, the date of
+delivery, the address where delivered, and the person
+or entity effecting delivery. Upon delivery to the
+commercial carrier, the attorney or party shall
+immediately file with the court an "Affidavit of Delivery
+to a Commercial Carrier of Process and Complaint."
+That affidavit shall verify that a filed copy of the
+process and complaint or other document to be
+served has been delivered to a commercial carrier in
+accordance with this rule.
+(C) When Effective. Service by commercial carrier shall
+be deemed complete and the time for answering shall run from the
+date of delivery as evidenced by the commercial carrier's written or
+electronic receipt showing to whom the process and complaint or
+other document to be served was delivered, the written or
+electronic signature of the recipient, the date of delivery, the
+address where delivered, and the person or entity effecting
+delivery. When service is initiated under Rule 4(i)(3)(B)(ii), the
+attorney or party shall, within ten (10) days after receiving the
+commercial carrier's written or electronic delivery receipt, file with
+the court a "Proof of Service by Commercial Carrier" that identifies
+the commercial carrier and explains the method of service, states
+the name of the person served, notes the date of delivery, and has
+attached a printed copy of the commercial carrier's written or
+electronic delivery receipt or other evidence of delivery. Within the
+meaning of this subdivision, "agent" means a person or entity
+specifically authorized by the addressee to receive the addressee's
+commercial-carrier deliveries and to deliver them to the addressee.
+Such agent's authority shall be conclusively established when the
+addressee acknowledges actual receipt of the summons and
+complaint or the court determines that the evidence proves the
+addressee did actually receive the summons and complaint in time
+to avoid a default. An action shall not be dismissed for improper
+service of process unless the service failed to inform the defendant
+of the action within time to avoid a default. In the case of an entity
+included in one of the provisions of Rule 4(c), "defendant," within
+the meaning of this subdivision, shall be such a person described in
+the applicable subdivision of 4(c).
+(D) Failure of Delivery. Failure to make service within
+sixty (60) days from issuance of the process by the clerk of the
+court and failure to make proof of service do not affect the validity
+of service perfected beyond that period.
+(dc) District Court Rule. Rule 4 applies in the district courts.

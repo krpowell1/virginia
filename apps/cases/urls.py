@@ -41,4 +41,21 @@ urlpatterns: list = [
     # Note / Contact add
     path("cases/<str:pk>/notes/add/", views.note_add, name="note-add"),
     path("cases/<str:pk>/contacts/add/", views.contact_add, name="contact-add"),
+
+    # Reports
+    path("reports/", views.report_builder, name="reports"),
+    path("reports/results/", views.report_results, name="report-results"),
+    path("reports/export/", views.report_export, name="report-export"),
+
+    # Search
+    path("search/", views.global_search, name="search"),
+    path("search/results/", views.search_results_partial, name="search-results"),
+
+    # Feedback
+    path("feedback/", views.feedback_list, name="feedback-list"),
+    path("feedback/new/", views.feedback_create, name="feedback-create"),
+
+    # Changelog
+    path("changelog/", views.changelog, name="changelog"),
+    path("changelog/dismiss/", views.changelog_dismiss, name="changelog-dismiss"),
 ]

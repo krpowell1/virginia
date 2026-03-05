@@ -9,7 +9,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Cases">
-  <meta name="theme-color" content="#2563EB">
+  <meta name="theme-color" content="#FECDD3">
   <link rel="manifest" href="{% static 'manifest.json' %}">
   <link rel="apple-touch-icon" href="{% static 'icons/icon-192.png' %}">
 
@@ -23,7 +23,26 @@
     theme: {
       extend: {
         fontFamily: {
-          sans: ['-apple-system', 'BlinkMacSystemFont', '"SF Pro Text"', '"SF Pro Display"', '"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'],
+          sans: ['"SF Pro Display"', '"SF Pro Text"', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'system-ui', 'sans-serif'],
+        },
+        fontSize: {
+          'xs': ['0.8125rem', { lineHeight: '1.25rem' }],
+          'sm': ['0.9375rem', { lineHeight: '1.5rem' }],
+        },
+        colors: {
+          peach: {
+            50: '#FFF8F6',
+            100: '#F0E0DA',
+            200: '#FECDD3',
+            300: '#E8A0A0',
+            600: '#A06060',
+            700: '#8B5252',
+            900: '#4A3728',
+          },
+        },
+        boxShadow: {
+          'warm': '0 1px 3px rgba(74,55,40,0.08)',
+          'warm-md': '0 4px 6px rgba(74,55,40,0.10)',
         },
       }
     }
@@ -38,34 +57,53 @@
 
   <style>
     [x-cloak] { display: none !important; }
+    body { font-size: 16px; line-height: 1.6; letter-spacing: -0.011em; }
   </style>
 
   {% block head_extra %}{% endblock %}
 </head>
 <body hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'
-      class="h-full bg-slate-50 text-slate-800 antialiased"
-      style="font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display', 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+      class="h-full bg-[#FFF5F2] text-[#4A3728] antialiased"
+      style="font-family: 'SF Pro Display', 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;">
 
   {% block nav %}
   <!-- Top nav -->
-  <nav class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200">
+  <nav class="sticky top-0 z-40 bg-[#FECDD3]/95 backdrop-blur border-b border-peach-300/40">
     <div class="max-w-3xl mx-auto px-4 h-14 flex items-center justify-between">
-      <a href="{% url 'cases:dashboard' %}" class="text-base font-semibold text-slate-800 tracking-tight">
+      <a href="{% url 'cases:dashboard' %}" class="text-base font-semibold text-peach-900 tracking-tight">
         DCM
       </a>
       <div class="flex items-center gap-6">
         <a href="{% url 'cases:dashboard' %}"
-           class="text-sm font-medium {% if request.resolver_match.url_name == 'dashboard' %}text-slate-800{% else %}text-slate-400 hover:text-slate-600{% endif %} transition-colors">
+           class="text-sm font-medium {% if request.resolver_match.url_name == 'dashboard' %}text-peach-900{% else %}text-peach-900/60 hover:text-peach-900{% endif %} transition-colors">
           Dashboard
         </a>
         <a href="{% url 'cases:list' %}"
-           class="text-sm font-medium {% if request.resolver_match.url_name == 'list' or request.resolver_match.url_name == 'detail' %}text-slate-800{% else %}text-slate-400 hover:text-slate-600{% endif %} transition-colors">
+           class="text-sm font-medium {% if request.resolver_match.url_name == 'list' or request.resolver_match.url_name == 'detail' %}text-peach-900{% else %}text-peach-900/60 hover:text-peach-900{% endif %} transition-colors">
           Cases
+        </a>
+        <a href="{% url 'cases:reports' %}"
+           class="text-sm font-medium {% if request.resolver_match.url_name == 'reports' %}text-peach-900{% else %}text-peach-900/60 hover:text-peach-900{% endif %} transition-colors">
+          Reports
+        </a>
+        <a href="{% url 'cases:search' %}"
+           class="{% if request.resolver_match.url_name == 'search' %}text-peach-900{% else %}text-peach-900/60 hover:text-peach-900{% endif %} transition-colors"
+           title="Search">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+          </svg>
+        </a>
+        <a href="{% url 'cases:feedback-list' %}"
+           class="relative {% if request.resolver_match.url_name == 'feedback-list' or request.resolver_match.url_name == 'feedback-create' %}text-peach-900{% else %}text-peach-900/60 hover:text-peach-900{% endif %} transition-colors"
+           title="Feedback">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+          </svg>
         </a>
         {% if user.is_authenticated %}
         <form method="post" action="{% url 'accounts:logout' %}">
           {% csrf_token %}
-          <button type="submit" class="text-sm text-slate-400 hover:text-slate-600 transition-colors">
+          <button type="submit" class="text-sm text-peach-900/60 hover:text-peach-900 transition-colors">
             Log out
           </button>
         </form>
@@ -79,7 +117,7 @@
   {% if messages %}
   <div class="max-w-3xl mx-auto px-4 pt-4">
     {% for message in messages %}
-    <div class="mb-2 rounded-lg px-4 py-3 text-sm
+    <div class="mb-2 rounded-xl px-4 py-3 text-sm shadow-warm
                 {% if message.tags == 'error' %}bg-red-50 text-red-800 border border-red-200
                 {% elif message.tags == 'warning' %}bg-amber-50 text-amber-800 border border-amber-200
                 {% else %}bg-emerald-50 text-emerald-800 border border-emerald-200{% endif %}"
@@ -112,7 +150,7 @@
            x-transition:leave="transition ease-in duration-150"
            x-transition:leave-start="opacity-100"
            x-transition:leave-end="opacity-0"
-           class="pointer-events-auto bg-white rounded-xl shadow-lg border px-4 py-3 text-sm max-w-xs"
+           class="pointer-events-auto bg-white rounded-xl shadow-warm-md border border-peach-100 px-4 py-3 text-sm max-w-xs"
            :class="toast.type === 'error' ? 'border-red-200 text-red-800' : 'border-emerald-200 text-emerald-800'">
         <span x-text="toast.message"></span>
       </div>
@@ -133,15 +171,15 @@
          x-transition:leave-start="opacity-100 scale-100"
          x-transition:leave-end="opacity-0 scale-95"
          @click.away="open = false"
-         class="absolute bottom-16 right-0 mb-2 bg-white rounded-xl shadow-xl border border-slate-200 py-2 w-48">
+         class="absolute bottom-16 right-0 mb-2 bg-white rounded-xl shadow-warm-md border border-peach-100 py-2 w-48">
       <a href="{% url 'cases:case-add' %}"
          @click.prevent="open = false; modal = 'case'"
-         class="block px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 transition-colors">
+         class="block px-4 py-2.5 text-sm text-peach-900 hover:bg-peach-50 transition-colors">
         New Case
       </a>
       <a href="{% url 'cases:deadline-add' %}"
          @click.prevent="open = false; modal = 'deadline'"
-         class="block px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 transition-colors">
+         class="block px-4 py-2.5 text-sm text-peach-900 hover:bg-peach-50 transition-colors">
         New Deadline
       </a>
     </div>
@@ -149,7 +187,7 @@
     <!-- FAB button -->
     <button @click="open = !open"
             :class="open ? 'rotate-45' : ''"
-            class="w-14 h-14 bg-slate-800 hover:bg-slate-700 text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-200 active:scale-95">
+            class="w-14 h-14 bg-peach-200 hover:bg-peach-300/60 text-peach-900 rounded-full shadow-warm-md flex items-center justify-center transition-all duration-200 active:scale-95">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
       </svg>
@@ -165,9 +203,9 @@
            x-transition:enter="transition ease-out duration-200"
            x-transition:enter-start="opacity-0 translate-y-8"
            x-transition:enter-end="opacity-100 translate-y-0">
-        <div class="sticky top-0 bg-white border-b border-slate-100 px-6 py-4 flex items-center justify-between rounded-t-2xl">
-          <h2 class="text-lg font-semibold text-slate-800">New Case</h2>
-          <button @click="modal = ''" class="text-slate-400 hover:text-slate-600 p-1">
+        <div class="sticky top-0 bg-white border-b border-peach-100 px-6 py-4 flex items-center justify-between rounded-t-2xl">
+          <h2 class="text-lg font-semibold text-peach-900">New Case</h2>
+          <button @click="modal = ''" class="text-peach-300 hover:text-peach-600 p-1">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
             </svg>
@@ -178,7 +216,7 @@
              hx-trigger="intersect once"
              hx-target="this"
              hx-swap="innerHTML">
-          <div class="p-6 text-center text-slate-400 text-sm">Loading...</div>
+          <div class="p-6 text-center text-[#9B8A82] text-sm">Loading...</div>
         </div>
       </div>
     </div>
@@ -193,9 +231,9 @@
            x-transition:enter="transition ease-out duration-200"
            x-transition:enter-start="opacity-0 translate-y-8"
            x-transition:enter-end="opacity-100 translate-y-0">
-        <div class="sticky top-0 bg-white border-b border-slate-100 px-6 py-4 flex items-center justify-between rounded-t-2xl">
-          <h2 class="text-lg font-semibold text-slate-800">New Deadline</h2>
-          <button @click="modal = ''" class="text-slate-400 hover:text-slate-600 p-1">
+        <div class="sticky top-0 bg-white border-b border-peach-100 px-6 py-4 flex items-center justify-between rounded-t-2xl">
+          <h2 class="text-lg font-semibold text-peach-900">New Deadline</h2>
+          <button @click="modal = ''" class="text-peach-300 hover:text-peach-600 p-1">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
             </svg>
@@ -206,7 +244,7 @@
              hx-trigger="intersect once"
              hx-target="this"
              hx-swap="innerHTML">
-          <div class="p-6 text-center text-slate-400 text-sm">Loading...</div>
+          <div class="p-6 text-center text-[#9B8A82] text-sm">Loading...</div>
         </div>
       </div>
     </div>

@@ -1,0 +1,205 @@
+Rule 30.
+Depositions upon oral examination.
+(a) When depositions may be taken. After commencement of the action,
+any party may take the testimony of any person, including a party, by deposition
+upon oral examination. Leave of court, granted with or without notice, must be
+obtained only if the plaintiff seeks to take a deposition prior to the expiration of
+thirty (30) days after service of the summons and complaint upon any defendant
+or other mode of service under Rule 4, except that leave is not required (1) if a
+defendant has served a notice of taking deposition or otherwise sought
+discovery, or (2) if special notice is given as provided in subdivision (b)(2) of this
+rule. The attendance of witnesses may be compelled by subpoena as provided in
+Rule 45. The deposition of a person confined in prison may be taken only by
+leave of court on such terms as the court prescribes.
+(b) Notice of examination; general requirements; special notice;
+videotaping or other equivalent technology; procurement of documents and
+things; deposition of organization.
+(1) A party desiring to take the deposition of any person upon oral
+examination shall give reasonable notice in writing to every other party
+to the action. The notice shall state the time and place for taking the
+deposition and the name and address of each person to be examined,
+if known, and, if the name is not known, a general description sufficient
+to identify the person or the particular class or group to which the
+person belongs. If a subpoena duces tecum is to be served on the
+person to be examined, the designation of the materials to be
+produced as set forth in the subpoena shall be attached to or included
+in the notice.
+(2) Leave of court is not required for the taking of a deposition by
+plaintiff if the notice (A) states that the person to be examined is about
+to go out of the circuit where the action is pending and more than one
+hundred (100) miles from the place of trial, or is about to go out of the
+United States, or is bound on a voyage to sea, and will be unavailable
+for examination unless the person's deposition is taken before
+expiration of the (thirty-) 30-day period, and (B) sets forth facts to
+support the statement. The plaintiff's attorney shall sign the notice, and
+the attorney's signature constitutes a certification by the attorney that
+to the best of the attorney's knowledge, information, and belief the
+statement and supporting facts are true. The sanctions provided by
+Rule 11 are applicable to the certification.
+If a party shows that when the party was served with notice under this
+subdivision (b)(2) the party was unable through the exercise of
+diligence to obtain counsel to represent the party at the taking of the
+deposition, the deposition may not be used against the party.
+(3) The court may for cause shown enlarge or shorten the time for
+taking the deposition.
+(4) The testimony at a deposition may be recorded on videotape, or by
+other equivalent technology, in addition to the stenographic record.
+Any such deposition will be conducted in a manner to replicate, to the
+extent feasible, the presentation of evidence at a trial. If the deposition
+is to be so recorded, the notice given pursuant to subdivision (b)(1) of
+this rule shall designate the person before whom the deposition shall
+be taken, the manner of recording, and the reason why such recording
+is necessary or desirable, and include other provisions to assure that
+the recorded testimony will be accurate and trustworthy and that the
+witness will be treated fairly. The party requesting videotaping or
+recording by other equivalent technology will bear the expense
+associated with such videotaping or recording. Any party may, at its
+own expense, obtain a copy of the recording. These expenses may be
+taxed as costs at the conclusion of the action, if appropriate. The
+written transcript by the court reporter shall constitute the official record
+of the deposition for purposes of subdivisions (e) and (f) of this rule.
+(5) The notice to a party deponent may be accompanied by a request
+that the party, at the taking of a deposition, produce and permit
+inspection and copying of designated books, papers, documents, or
+tangible things which constitute or contain matters within the scope of
+Rule 26(b). If the request accompanies the summons and complaint or
+is new, the party deponent may, within 45 days, serve upon the party
+taking the deposition, written objection to inspection or copying of any
+or all of the designated materials; otherwise, the deponent must serve
+any such objection within 14 days. If objection is made, the party taking
+the deposition shall not be entitled to inspect the materials except
+pursuant to an order of the court. The party taking the deposition may
+move at any time for an order under Rule 37(a) with respect to any
+objection to the request or any part thereof, or any failure to produce or
+permit inspection as requested.
+(6) A party may in the party's notice and in a subpoena name as the
+deponent a public or private corporation or a partnership or association
+or governmental agency and describe with reasonable particularity the
+matters on which examination is requested. In that event, the
+organization so named shall designate one or more officers, directors
+or managing agents, or other persons who consent to testify on its
+behalf, and may set forth, for each person designated, the matters on
+which the person will testify. A subpoena shall advise a nonparty
+organization of its duty to make such a designation. The persons so
+designated shall testify as to matters known or reasonably available to
+the organization. This subdivision (b)(6) does not preclude taking a
+deposition by any other procedure authorized in these rules.
+(7) The parties may stipulate in writing, or the court may upon motion
+order, that a deposition be taken by telephone or other remote means
+using audio-video communication technology. For the purposes of this
+rule and Rules 28(a), 37(a)(1), 37(b)(1), and 45(a), a deposition taken
+by telephone or by other remote means is taken in the circuit and at
+the place where the deponent is to answer questions propounded to
+the deponent.
+(8) In every deposition that proceeds by videoconferencing in
+accordance with Rule 30(b)(7) above, the witness may be sworn in
+remotely by audio-video communication technology if the deposition is
+conducted by audio-video communication equipment that allows the
+court reporter and the witness simultaneously to view and
+communicate with each other. If not located within the State of
+Alabama, a witness may consent to being placed under oath remotely
+as described in this subdivision.
+(c) Examination and cross-examination; record of examination; oath;
+objections. Examination and cross-examination of witnesses may proceed as
+permitted at the trial under the Alabama Rules of Evidence, except that Rule 103
+and Rule 615, Ala. R. Evid., which deal with trial procedure, are not applicable to
+pretrial discovery. The officer before whom the deposition is to be taken shall put
+the witness on oath and shall personally, or by someone acting under the
+officer's direction and in the officer's presence, record the testimony of the
+witness. The testimony shall be taken stenographically and may be videotaped or
+recorded by other equivalent technology in accordance with subdivision (b)(4) of
+this rule.
+All objections made at the time of the examination to the qualifications of
+the officer taking the deposition, or to the manner of taking it, or to the evidence
+presented, or to the conduct of any party, and any other objection to the
+proceedings, shall be noted by the officer upon the deposition. Evidence objected
+to shall be taken subject to any objection, but the examination shall still proceed,
+subject to any such objection. Any objection must be stated concisely in a
+nonargumentative and nonsuggestive manner. A person may instruct a deponent
+not to answer only when necessary to preserve a privilege, to enforce a limitation
+ordered by the court, or to present a motion under Rule 30(d)(2). In lieu of
+participating in the oral examination, parties may serve written questions in a
+sealed envelope on the party taking the deposition and that party shall transmit
+them to the officer, who shall propound them to the witness and record the
+answers verbatim.
+(d) Sanction; Motion to Terminate or Limit Examination.
+(1) Sanction. The court may impose an appropriate sanction --
+including awarding the reasonable expenses and attorney's fees
+incurred by any party -- on any person who impedes, delays, or
+frustrates the fair examination of the deponent.
+(2) Motion to Terminate or Limit Examination. At any time during
+the taking of the deposition, on motion of a party or of the deponent
+and upon a showing that the examination is being conducted in bad
+faith or in such manner as unreasonably to annoy, embarrass, or
+oppress the deponent or party, the court in which the action is
+pending or the court in the circuit where the deposition is being
+taken may order the officer conducting the examination to cease
+forthwith from taking the deposition, or may limit the scope and
+manner of the taking of the deposition as provided in Rule 26(c). If
+the order made terminates the examination, it shall be resumed
+thereafter only upon the order of the court in which the action is
+pending. Upon demand of the objecting party or deponent, the
+taking of the deposition shall be suspended for the time necessary
+to make a motion for an order. The provisions of Rule 37(a)(4)
+apply to the award of expenses incurred in relation to the motion.
+(e) Submission to witness; changes; signing. When the testimony is fully
+transcribed the deposition shall be submitted to the witness for examination and
+shall be read to or by the witness, unless such examination and reading are
+waived by the witness and by the parties. Any changes in form or substance
+which the witness desires to make shall be entered upon the deposition by the
+officer with a statement of the reasons given by the witness for making them. The
+deposition shall then be signed by the witness, unless the parties by stipulation
+waive the signing or the witness is ill or cannot be found or refuses to sign. If the
+deposition is not signed by the witness within thirty (30) days of its submission to
+the witness, the officer shall sign it and state on the record the fact of the waiver
+or of the illness or absence of the witness or the fact of the refusal to sign
+together with the reason, if any, given therefor; the deposition may then be used
+as fully as though signed unless on a motion to suppress under Rule 32(d)(4) the
+court holds that the reasons given for the refusal to sign require rejection of the
+deposition in whole or in part.
+(f) Certification and filing by officer; exhibits; copies; notice of filing.
+(1) The officer shall certify on the deposition that the witness was duly
+sworn by the officer and that the deposition is a true record of the
+testimony given by the witness. Unless otherwise ordered by the court,
+the officer shall then securely seal the deposition in an envelope
+indorsed with the title of the action and marked “Deposition of [here
+insert name of witness]” and shall promptly file it with the court in which
+the action is pending or send it by registered or certified mail to the
+clerk thereof for filing.
+Documents and things produced for inspection during the examination
+of the witness shall, upon the request of a party, be marked for
+identification and annexed to the deposition and may be inspected and
+copied by any party, except that if the person producing the materials
+desires to retain them the person may (A) offer copies to be marked for
+identification and annexed to the deposition and to serve thereafter as
+originals if the person affords to all parties fair opportunity to verify the
+copies by comparison with the originals, or (B) offer the originals to be
+marked for identification, after giving to each party an opportunity to
+inspect and copy them, in which event the materials may then be used
+in the same manner as if annexed to the deposition. Any party may
+move for an order that the original be annexed to and returned with the
+deposition to the court, pending final disposition of the case.
+(2) Upon payment of reasonable charges therefor, the officer shall
+furnish a copy of the deposition to any party or to the deponent.
+(3) The party taking the deposition shall give prompt notice of its filing
+to all other parties.
+(g) Failure to attend or to serve subpoena; expenses.
+(1) If the party giving the notice of the taking of a deposition fails to
+attend and proceed therewith and another party attends in person or
+by attorney pursuant to the notice, the court may order the party giving
+the notice to pay to such other party the reasonable expenses incurred
+by that party and that party’s attorney in attending, including
+reasonable attorney fees.
+(2) If the party giving the notice of the taking of a deposition of a
+witness fails to serve a subpoena upon the witness and the witness
+because of such failure does not attend, and if another party attends in
+person or by attorney because that party expects the deposition of that
+witness to be taken, the court may order the party giving the notice to
+pay to such other party the reasonable expenses incurred by that party
+and that party’s attorney in attending, including reasonable attorney
+fees.
+(dc) District court rule. Rule 30 applies in the district courts in those
+instances when a deposition on oral examination is permitted by Rule 26(dc).
+The reference to “circuit” in Rule 30(b)(7) is changed to “district.” The provisions
+of Rule 30(b)(4) do not apply in the district courts absent a stipulation in writing
+by the parties or court order.
